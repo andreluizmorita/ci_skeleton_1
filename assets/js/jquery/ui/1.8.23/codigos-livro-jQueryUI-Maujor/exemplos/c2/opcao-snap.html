@@ -1,0 +1,83 @@
+<!DOCTYPE html>
+<html lang="pt-br">
+<head>
+<title>Livro jQuery UI do Maujor</title>
+<meta charset="utf-8" />
+<meta name="keywords" content="jquery,interface de usuário,ui,widgets,interação,javascript, livro maujor, maujor" />
+<meta name="description" content="Página integrante do site de apoio ao livro jQuery UI do Maujor. O site contém todos os exemplos constantes do livro." />
+<meta name="author" content="Maujor" />
+<link rel="shortcut icon" href="/favicon.ico" />
+<link rel="icon" href="/favicon.ico" type="image/x-icon" />
+<link type="text/css" href="css/ui-lightness/jquery-ui-1.8.17.custom.css" rel="stylesheet" />	
+<link href="../estilos.css" rel="stylesheet" type="text/css" /> <!-- CSS para as páginas exemplo -->
+<style>
+.drag, .drag1, .drag2, .drag3, .drag4, .drag5 {
+	font-size:11px;
+	color:#ffe290;
+	width:100px; 
+	height:60px;
+	background:#d04000;
+	padding:2px 4px;
+	border-radius:4px;
+	margin-bottom:15px;
+	}
+.el-snap {
+	width:400px;
+	height:460px;
+	margin-right:90px !important;
+	margin-bottom:10px !important;
+	border: 1px solid black;
+	background: #ccc;
+	}
+</style>
+<script type="text/javascript" src="../modernizr.js"></script> 
+<script type="text/javascript" src="../jquery-min.js"></script>
+<script type="text/javascript" src="js/jquery-ui-1.8.17.custom.min.js"></script>
+<script>
+//<![CDATA[
+$(function() { 
+	$('.atrair').draggable({snap: true});
+	$('.drag').draggable({snap: '.el-snap'});
+	$('.drag1').draggable({snap: '.el-snap', snapTolerance: 50});
+	$('.drag2').draggable({snap: '.el-snap', snapMode: 'outer'});
+	$('.drag3').draggable({snap: '.el-snap', snapMode: 'inner', snapTolerance: 60});
+	$('.drag4').draggable({grid: [130, 90]});
+	$('.drag5').draggable({grid: [30, 30]});
+
+});
+// ]]>
+</script>
+</head>
+<body class="cap2">
+<div id="tudo">
+<div id="conteudo">
+<header>	
+	<h1>Capítulo 2 &#8212; Componente Draggable (Arrastar)</h1>
+	<p><a href="../index.html"></a></p>
+	<div class="clear"></div>	
+</header>
+<section>	
+	<h2>Opções <code>snap</code>, <code>snapMode</code>, <code>snapTolerance</code></h2>
+<div class="esq">	
+	<div class="drag atrair">snap: true<br />snap: el-snap.</div>
+	<div class="drag1 atrair">snap: true<br />snap: el-snap<br />snapTolerance: 50</div>
+	<div class="drag2 atrair">snap: true<br />snap: el-snap<br />snapMode: outer</div>
+	<div class="drag3 atrair">snap: true<br />snap: el-snap<br />snapMode: inner<br />snapTolerance: 60</div>
+	<div class="drag4 atrair">snap: true<br />grid: [130, 90]</div>
+	<div class="drag5 atrair">snap: true<br />grid: [30, 30]</div>
+</div>	
+<div class="dir">
+<div class="el-snap"></div>	
+</div>	
+	<div class="clear"></div>
+<p class="tema">Tema: personalizado</p>
+</section>
+<footer>	
+	<nav><a href="opcao-scrollspeed.html">&laquo; anterior</a> | <a href="opcao-stack.html">próximo &raquo;</a></nav>
+	<input type="button" value="RESET" onclick="window.location.reload()" id="reload" />
+	<div class="clear"></div>	
+</footer>
+</div> <!-- /conteudo -->
+</div> <!-- /tudo -->
+</body>
+</html>

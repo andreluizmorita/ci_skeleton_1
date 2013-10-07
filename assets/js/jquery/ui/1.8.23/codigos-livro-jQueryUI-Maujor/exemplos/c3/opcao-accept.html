@@ -1,0 +1,100 @@
+<!DOCTYPE html>
+<html lang="pt-br">
+<head>
+<title>Livro jQuery UI do Maujor</title>
+<meta charset="utf-8" />
+<meta name="keywords" content="jquery,interface de usuário,ui,widgets,interação,javascript, livro maujor, maujor" />
+<meta name="description" content="Página integrante do site de apoio ao livro jQuery UI do Maujor. O site contém todos os exemplos constantes do livro." />
+<meta name="author" content="Maujor" />
+<link rel="shortcut icon" href="/favicon.ico" />
+<link rel="icon" href="/favicon.ico" type="image/x-icon" />
+<link type="text/css" href="css/hot-sneaks/jquery-ui-1.8.17.custom.css" rel="stylesheet" />	
+<link href="../estilos.css" rel="stylesheet" type="text/css" /> <!-- CSS para as páginas exemplo -->
+<style>
+.drag, .drag1, .drag2, .drag3 {
+	color:#ffe290;
+	width:70px; 
+	height:60px;
+	padding:5px 10px;
+	border-radius:4px;
+	margin-bottom:67px;
+	}
+.drop, .drop1, .drop2 {
+	padding:5px 10px;
+	border: 5px solid black;
+	border-radius:15px;
+	margin-bottom:15px;
+	width:230px;
+	height:130px;
+	}
+.drag {background:#c00;}
+.drag1 {background:#070;}
+.drag2 {background:#036;}
+.drag3 {background:#666;}
+.esq{margin-right:40px !important}
+.destacar {background:#daf6ff;}
+</style>
+<script type="text/javascript" src="../modernizr.js"></script> 
+<script type="text/javascript" src="../jquery-min.js"></script>
+<script type="text/javascript" src="js/jquery-ui-1.8.17.custom.min.js"></script>
+<script>
+//<![CDATA[
+$(function() { 
+	$('.drag, .drag1, .drag2, .drag3').draggable({revert: 'invalid'});
+	$('.drop').droppable({accept: '.drag'});
+	$('.drop1').droppable({accept: '.drag1, .drag2'});
+	
+	$('.drop2').droppable({accept: function(uiDrag) {
+		var cor = uiDrag.css('backgroundColor');
+		if( cor == 'rgb(0, 51, 102)' || cor == 'rgb(102, 102, 102)' ) {return true};
+	} 
+	});
+});
+// ]]>
+</script>
+</head>
+<body class="cap3">
+<div id="tudo">
+<div id="conteudo">
+<header>	
+	<h1>Capítulo 3 &#8212; Componente Droppable (Soltar)</h1>
+	<p><a href="../index.html"></a></p>
+	<div class="clear"></div>
+</header>	
+<section>	
+	<h2>Opção <code>accept</code></h2>
+	
+<div class="esq">	
+	<div class="drag">
+	Arraste-me Solte-me!</div>
+	<div class="drag1">Arraste-me Solte-me!</div>
+	<div class="drag2">Arraste-me Solte-me!</div>
+	<div class="drag3">Arraste-me Solte-me!</div>
+</div>
+
+<div class="esq">	
+	<div class="drag1">Arraste-me Solte-me!</div>
+	<div class="drag3">Arraste-me Solte-me!</div>
+	<div class="drag">Arraste-me Solte-me!</div>
+	<div class="drag2">Arraste-me Solte-me!</div>
+</div>
+
+<div class="dir">	
+	<div class="drop">Eu aceito div de cor vermelha</div>
+	<div class="drop1">Eu aceito div de cor verde e azul</div>
+	<div class="drop2">Eu aceito um div de cor cinza e azul</div>
+</div>
+	
+<div class="clear"></div>	
+<p class="tema">Tema: personalizado</p>
+</section>
+<footer>	
+	<nav><a href="opcao-disabled.html">&laquo; anterior</a> | <a href="opcao-activeclass.html">próximo &raquo;</a></nav>
+	<input type="button" value="RESET" onclick="window.location.reload()" id="reload" />
+	<div class="clear"></div>	
+</footer>
+</div> <!-- /conteudo -->
+</div> <!-- /tudo -->
+</body>
+</html>
+

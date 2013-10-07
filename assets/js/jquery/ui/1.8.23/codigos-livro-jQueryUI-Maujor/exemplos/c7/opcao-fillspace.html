@@ -1,0 +1,99 @@
+<!DOCTYPE html>
+<html lang="pt-br">
+<head>
+<title>Livro jQuery UI do Maujor</title>
+<meta charset="utf-8" />
+<meta name="keywords" content="jquery,interface de usuário,ui,widgets,interação,javascript, livro maujor, maujor" />
+<meta name="description" content="Página integrante do site de apoio ao livro jQuery UI do Maujor. O site contém todos os exemplos constantes do livro." />
+<meta name="author" content="Maujor" />
+<link rel="shortcut icon" href="/favicon.ico" />
+<link rel="icon" href="/favicon.ico" type="image/x-icon" />
+<link type="text/css" href="css/start/jquery-ui-1.8.18.custom.css" rel="stylesheet" />
+<style>
+.esq, .dir {width:45%;}
+</style>	
+<link href="../estilos.css" rel="stylesheet" type="text/css" /> <!-- CSS para as páginas exemplo -->
+<script type="text/javascript" src="../modernizr.js"></script> 
+<script type="text/javascript" src="../jquery-min.js"></script>
+<script type="text/javascript" src="js/jquery-ui-1.8.18.custom.min.js"></script>
+<script type="text/javascript" src="js/jquery-ui-1.8.18.custom-core-effects.min.js"></script>
+<script>
+//<![CDATA[
+$(function() { 
+	$('.acordeao').accordion({active: false, animated: 'easeOutBounce', collapsible:true, fillSpace: true});
+	$('.acordeao1').accordion({active: false, animated: 'easeOutBounce', collapsible:true, fillSpace: false});
+});
+// ]]>
+</script>
+</head>
+<body class="cap7">
+<div id="tudo">
+<div id="conteudo">
+<header>	
+	<h1>Capítulo 7 &#8212; Widget Accordion (Acordeão)</h1>
+	<p><a href="../index.html"></a></p>
+	<div class="clear"></div>	
+</header>
+<section>	
+	<h2>Opção <code>fillSpace</code></h2>
+<p class="ui-state-highlight ui-corner-all">Para o acordeão à esquerda o valor da opção <code>fillSpace</code> é true e à direira false.</p>
+
+<div class="acordeao esq">
+	<h3><a href="#">Abacate</a></h3>
+	<div>
+		<p><img src="../imagens/abacate-acordeao.png" alt="Abacate" width="113" height="70" class="esq" />O abacate é o pseudofruto comestível do abacateiro (Persea americana), uma árvore da família da laureáceas nativa do México ou da América do Sul, hoje extensamente cultivada em regiões tropicais, inclusive nas Ilhas Canárias e na Ilha da Madeira.</p>
+		<p>O abacateiro cresce mais facilmente em solos leves, profundos, drenados e ligeiramente ácidos. As melhores condições climáticas são encontradas em regiões com chuvas em torno de 1 200 milímetros anuais.</p>
+	</div>
+	
+	<h3><a href="#">Abacaxi</a></h3>
+	<div>
+		<p><img src="../imagens/abacaxi-acordeao.png" alt="Abacaxi" width="108" height="116" class="esq" />Ananás ou abacaxi é uma planta monocotiledônea da família das bromeliáceas, subfamília Bromelioideae. Os abacaxizeiros cultivados pertencem à espécie Ananas comosus, que compreende muitas variedades frutíferas. Há também várias espécies selvagens, pertencentes ao mesmo gênero e grupo.</p>	
+		</div>
+	
+	<h3><a href="#">Cupuaçu</a></h3>
+	<div>
+		<p><img src="../imagens/cupuacu-acordeao.png" alt="Cupuaçu" width="112" height="134" class="esq" />Cupuaçu é o fruto de uma árvore originária da Amazônia brasileira (Theobroma grandiflorum; ex - Sterculiaceae), parente próxima do cacaueiro. A árvore é conhecida como cupuaçuzeiro, cupuaçueiro ou cupu, é uma fruta típica da amazônia brasileira, sobretudo no estado do Pará.</p>
+	</div>
+	
+	<h3><a href="#">Laranja</a></h3>
+	<div>
+		<p><img src="../imagens/laranjaesq-acordeao.png" alt="Laranja" width="70" height="65" class="esq" />A laranja é o fruto produzido pela laranjeira (Citrus x sinensis), uma árvore da família Rutaceae. A laranja é um fruto híbrido, criado na antiguidade a partir do cruzamento do pomelo com a tangerina. O sabor da laranja varia do doce ao levemente ácido. Frequentemente, esta fruta é descascada e comida ao natural, ou espremida para obter sumo.</p>
+		<p class="clear">As pevides (pequenos caroços duros) são habitualmente removidas, embora possam ser usadas em algumas receitas. A casca exterior pode ser usada também em diversos pratos culinários, como ornamento, ou mesmo para dar algum sabor. A camada branca entre a casca e as gomas, de dimensão variável, raramente é utilizada, apesar de ter um sabor levemente doce. É recomendada para "quebrar" o sabor ácido da laranja na boca, após terminar de consumir o fruto.</p>
+	</div> 
+</div>
+	
+<div class="acordeao1 dir">
+	<h3><a href="#">Abacate</a></h3>
+	<div>
+		<p><img src="../imagens/abacate-acordeao.png" alt="Abacate" width="113" height="70" class="esq" />O abacate é o pseudofruto comestível do abacateiro (Persea americana), uma árvore da família da laureáceas nativa do México ou da América do Sul, hoje extensamente cultivada em regiões tropicais, inclusive nas Ilhas Canárias e na Ilha da Madeira.</p>
+		<p>O abacateiro cresce mais facilmente em solos leves, profundos, drenados e ligeiramente ácidos. As melhores condições climáticas são encontradas em regiões com chuvas em torno de 1 200 milímetros anuais.</p>
+	</div>
+	
+	<h3><a href="#">Abacaxi</a></h3>
+	<div>
+		<p><img src="../imagens/abacaxi-acordeao.png" alt="Abacaxi" width="108" height="116" class="esq" />Ananás ou abacaxi é uma planta monocotiledônea da família das bromeliáceas, subfamília Bromelioideae. Os abacaxizeiros cultivados pertencem à espécie Ananas comosus, que compreende muitas variedades frutíferas. Há também várias espécies selvagens, pertencentes ao mesmo gênero e grupo.</p>	
+		</div>
+	
+	<h3><a href="#">Cupuaçu</a></h3>
+	<div>
+		<p><img src="../imagens/cupuacu-acordeao.png" alt="Cupuaçu" width="112" height="134" class="esq" />Cupuaçu é o fruto de uma árvore originária da Amazônia brasileira (Theobroma grandiflorum; ex - Sterculiaceae), parente próxima do cacaueiro. A árvore é conhecida como cupuaçuzeiro, cupuaçueiro ou cupu, é uma fruta típica da amazônia brasileira, sobretudo no estado do Pará.</p>
+	</div>
+	
+	<h3><a href="#">Laranja</a></h3>
+	<div>
+		<p><img src="../imagens/laranjaesq-acordeao.png" alt="Laranja" width="70" height="65" class="esq" />A laranja é o fruto produzido pela laranjeira (Citrus x sinensis), uma árvore da família Rutaceae. A laranja é um fruto híbrido, criado na antiguidade a partir do cruzamento do pomelo com a tangerina. O sabor da laranja varia do doce ao levemente ácido. Frequentemente, esta fruta é descascada e comida ao natural, ou espremida para obter sumo.</p>
+		<p class="clear">As pevides (pequenos caroços duros) são habitualmente removidas, embora possam ser usadas em algumas receitas. A casca exterior pode ser usada também em diversos pratos culinários, como ornamento, ou mesmo para dar algum sabor. A camada branca entre a casca e as gomas, de dimensão variável, raramente é utilizada, apesar de ter um sabor levemente doce. É recomendada para "quebrar" o sabor ácido da laranja na boca, após terminar de consumir o fruto.</p>
+	</div>
+</div>
+<div class="clear"></div>
+<p class="tema">Tema: Start</p>
+</section>
+<footer>	
+	<nav><a href="opcao-event.html">&laquo; anterior</a> | <a href="opcao-header.html">próximo &raquo;</a></nav>
+	<input type="button" value="RESET" onclick="window.location.reload()" id="reload" />
+	<div class="clear"></div>	
+</footer>
+</div> <!-- /conteudo -->
+</div> <!-- /tudo -->
+</body>
+</html>

@@ -1,0 +1,74 @@
+<!DOCTYPE html>
+<html lang="pt-br">
+<head>
+<title>Livro jQuery UI do Maujor</title>
+<meta charset="utf-8" />
+<meta name="keywords" content="jquery,interface de usuário,ui,widgets,interação,javascript, livro maujor, maujor" />
+<meta name="description" content="Página integrante do site de apoio ao livro jQuery UI do Maujor. O site contém todos os exemplos constantes do livro." />
+<meta name="author" content="Maujor" />
+<link rel="shortcut icon" href="/favicon.ico" />
+<link rel="icon" href="/favicon.ico" type="image/x-icon" />
+<link type="text/css" href="css/swanky-purse/jquery-ui-1.8.17.custom.css" rel="stylesheet" />	
+<link href="../estilos.css" rel="stylesheet" type="text/css" /> <!-- CSS para as páginas exemplo -->
+<style>
+.sele { 
+	list-style-position:inside; 
+	margin:0; 
+	padding:0; 
+	width:30%; 
+	}
+.sele li {
+	font-size:1.2em; 
+	padding:5px 10px; 
+	height:20px; 
+	}
+
+.ui-selecting {background:#0f0; color:#333;}
+.ui-selected {background:#f7b54a; color:#fff}
+.ui-state-highlight {padding:5px 10px; width:200px;}
+</style>
+<script type="text/javascript" src="../modernizr.js"></script> 
+<script type="text/javascript" src="../jquery-min.js"></script>
+<script type="text/javascript" src="js/jquery-ui-1.8.17.custom.min.js"></script>
+<script>
+//<![CDATA[
+$(function() { 
+	$('#inserirItem').bind('click', function() { 
+	var frutas = ['Abacate','Abacaxi','Banana','Cupuaçu','Jaca','Laranja']	
+	var novoItem = $('<li />', {
+		class:"ui-widget-content ui-corner-all" 
+	});
+	numItem = $('li').length;
+	novoItem.text(frutas[numItem]).appendTo('.sele');
+	if (numItem > 3) {$('section').selectable('refresh');}
+	if (numItem > 4) { $('#inserirItem').unbind('click');}
+});	
+	$('section').selectable({autoRefresh: false, filter: 'li'});
+});
+// ]]>
+</script>
+</head>
+<body class="cap5">
+<div id="tudo">
+<div id="conteudo">
+<header>	
+	<h1>Capítulo 5 &#8212; Componente Selectable (Selecionar)</h1>
+	<p><a href="../index.html"></a></p>
+	<div class="clear"></div>	
+</header>
+<section>	
+	<h2>Método <code>refresh</code></h2>
+	<p class="ui-state-highlight ui-corner-all">A seleção só é possível depois da inserção do quarto item.</p>
+	<button type="button" class="botao" id="inserirItem">Inserir Item</button>
+	<ol class="sele"></ol>
+<p class="tema">Tema: Swanky Purse</p>
+</section>
+<footer>	
+	<nav><a href="metodo-widget.html">&laquo; anterior</a> | <a href="formato-grid.html">próximo &raquo;</a></nav>
+	<input type="button" value="RESET" onclick="window.location.reload()" id="reload" />
+	<div class="clear"></div>	
+</footer>
+</div> <!-- /conteudo -->
+</div> <!-- /tudo -->
+</body>
+</html>

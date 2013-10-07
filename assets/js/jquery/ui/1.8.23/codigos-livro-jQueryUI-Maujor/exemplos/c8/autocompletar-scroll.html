@@ -1,0 +1,133 @@
+<!DOCTYPE html>
+<html lang="pt-br">
+<head>
+<title>Livro jQuery UI do Maujor</title>
+<meta charset="utf-8" />
+<meta name="keywords" content="jquery,interface de usuário,ui,widgets,interação,javascript, livro maujor, maujor" />
+<meta name="description" content="Página integrante do site de apoio ao livro jQuery UI do Maujor. O site contém todos os exemplos constantes do livro." />
+<meta name="author" content="Maujor" />
+<link rel="shortcut icon" href="/favicon.ico" />
+<link rel="icon" href="/favicon.ico" type="image/x-icon" />
+<link type="text/css" href="css/sunny/jquery-ui-1.8.18.custom.css" rel="stylesheet" />
+<style>
+.ui-autocomplete {
+	position:absolute;
+	max-height:150px;
+	overflow-y:scroll;
+	overflow-x:hidden;
+	padding-right:20px;
+	text-align:left;
+	}
+</style>
+	
+<link href="../estilos.css" rel="stylesheet" type="text/css" /> <!-- CSS para as páginas exemplo -->
+<script type="text/javascript" src="../modernizr.js"></script> 
+<script type="text/javascript" src="../jquery-min.js"></script>
+<script type="text/javascript" src="js/jquery-ui-1.8.18.custom.min.js"></script>
+<script>
+//<![CDATA[
+$(function() { 
+	var listaFrutas = ['Abacate',
+						'Abacaxi',
+						'Abiu',
+						'Abricó',
+						'Açaí',
+						'Acerola',
+						'Ameixa',
+						'Amêndoa',
+						'Amora',
+						'Araçá',
+						'Avelã',
+						'Bacaba',
+						'Bacupari',
+						'Bacuri',
+						'Banana',
+						'Buriti',
+						'Cacau',
+						'Cajá',
+						'Caju',
+						'Cambuci',
+						'Caqui',
+						'Carambola',
+						'Carnaúba',
+						'Castanha',
+						'Cereja',
+						'Coco',
+						'Cupuaçu',
+						'Damasco',
+						'Figo',
+						'Framboesa',
+						'Goiaba',
+						'Graviola',
+						'Grumixama',
+						'Guaraná',
+						'Guariroba ',
+						'Ingá',
+						'Jabuticaba',
+						'Jaca',
+						'Jambo',
+						'Jambolão',
+						'Jamelão',
+						'Jatobá',
+						'Jenipapo',
+						'Jurubeba',
+						'Kiwi',
+						'Limão',
+						'Mamão',
+						'Manga',
+						'Mangaba',
+						'Maracujá',
+						'Marmelo',
+						'Melancia',
+						'Melão',
+						'Mexerica',
+						'Mexerica',
+						'Morango',
+						'Nectarina',
+						'Nespera',
+						'Pequi',
+						'Pera',
+						'Pessego',
+						'Pinhão',
+						'Pitanga',
+						'Pitomba',
+						'Pupunha',
+						'Romã',
+						'Sapota',
+						'Sapoti',
+						'Seriguela',
+						'Tamara',
+						'Tamarindo',
+						'Tucumã',
+						'Umbu',
+						'Uva',
+	];
+	$('.frutas').autocomplete({source: listaFrutas});
+});
+// ]]>
+</script>
+</head>
+<body class="cap8">
+<div id="tudo">
+<div id="conteudo">
+<header>	
+	<h1>Capítulo 8 &#8212; Widget Autocomplete (Autocompletar)</h1>
+	<p><a href="../index.html"></a></p>
+	<div class="clear"></div>	
+</header>
+<section>	
+	<h2>Autocompletar com scroll</h2>
+	<p class="ui-state-highlight ui-corner-all">Digite uma letra.<br />As sugestões aparecerão em uma caixa com barra de rolamento e alinhadas à esquerda.</p>
+	<label for="frutas">Fruta: </label>
+	<input class="frutas" id="frutas" />
+<p class="tema">Tema: Sunny</p>
+</section>
+<footer>	
+	<nav><a href="autocompletar-basico.html">&laquo; anterior</a> | <a href="classe-intrinseca1.html">próximo &raquo;</a></nav>
+	<input type="button" value="RESET" onclick="window.location.reload()" id="reload" />
+	<div class="clear"></div>	
+</footer>
+</div> <!-- /conteudo -->
+</div> <!-- /tudo -->
+</body>
+</html>

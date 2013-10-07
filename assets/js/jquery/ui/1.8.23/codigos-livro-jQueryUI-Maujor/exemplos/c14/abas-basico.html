@@ -1,0 +1,106 @@
+<!DOCTYPE html>
+<html lang="pt-br">
+<head>
+<title>Livro jQuery UI do Maujor</title>
+<meta charset="utf-8" />
+<meta name="keywords" content="jquery,interface de usuário,ui,widgets,interação,javascript, livro maujor, maujor" />
+<meta name="description" content="Página integrante do site de apoio ao livro jQuery UI do Maujor. O site contém todos os exemplos constantes do livro." />
+<meta name="author" content="Maujor" />
+<link rel="shortcut icon" href="/favicon.ico" />
+<link rel="icon" href="/favicon.ico" type="image/x-icon" />
+<link type="text/css" href="css/ui-lightness/jquery-ui-1.8.18.custom.css" rel="stylesheet" />	
+<link href="../estilos.css" rel="stylesheet" type="text/css" /> <!-- CSS para as páginas exemplo -->
+<script type="text/javascript" src="../modernizr.js"></script> 
+<script type="text/javascript" src="../jquery-min.js"></script>
+<script type="text/javascript" src="js/jquery-ui-1.8.18.custom.min.js"></script>
+<script>
+//<![CDATA[
+$(function() { 
+	$('#abas').tabs();	
+});
+// ]]>
+</script>
+</head>
+<body class="cap14">
+<div id="tudo">
+<div id="conteudo">
+<header>	
+	<h1>Capítulo 14 &#8212; Widget Tabs (Abas)</h1>
+	<p><a href="../index.html"></a></p>
+	<div class="clear"></div>	
+</header>
+<section>	
+	<h2>Abas básico</h2>
+	<p class="ui-state-highlight ui-corner-all">Implementação básica de um painel de abas.</p>
+	<div id="abas">
+	<ul>
+		<li><a href="#aba-1">Abacate</a></li>
+		<li><a href="#aba-2">Abacaxi</a></li>
+		<li><a href="#aba-3">Cupuaçu</a></li>
+		<li><a href="#aba-4">Laranja</a></li>
+    </ul>
+	<div id="aba-1">
+		<h3>Abacate</h3>
+		<p><img src="../imagens/abacate.png" alt="abacate" width="226" height="140" class="esq" />O abacate é o pseudofruto comestível do abacateiro (Persea americana), uma árvore da família da laureáceas nativa do México ou da América do Sul, hoje extensamente cultivada em regiões tropicais, inclusive nas Ilhas Canárias e na Ilha da Madeira.</p>
+		<p>O abacateiro cresce mais facilmente em solos leves, profundos, drenados e ligeiramente ácidos. As melhores condições climáticas são encontradas em regiões com chuvas em torno de 1 200 milímetros anuais.</p>
+		
+		<p>São conhecidas mais de 500 variedades, de três origens diferentes: a guatemalteca, a antilhana e a mexicana. A parte comestível é a polpa verde-amarelada, de consistência mole, que envolve a grande semente.</p>
+		<small><em>Fonte: Wikipedia</em></small>
+	</div>
+	<div id="aba-2">
+		<h3>Abacaxi</h3>
+		<p><img src="../imagens/abacaxi.png" alt="abacaxi" width="216" height="233" class="dir" />Ananás ou abacaxi é uma planta monocotiledônea da família das bromeliáceas, subfamília Bromelioideae. Os abacaxizeiros cultivados pertencem à espécie Ananas comosus, que compreende muitas variedades frutíferas. Há também várias espécies selvagens, pertencentes ao mesmo gênero e grupo.</p>
+		<p>O termo abacaxi (em português) é, com forte probabilidade, oriundo do tupi ibacati, 'bodum ou fedor de fruto', 'fruto fedorento' (ibá, 'fruto', cati, 'recender ou cheirar fortemente'), documentado já no início do séc. XIX.</p>
+
+		<p>O termo ananás (em português e espanhol) é do guarani naná, e documentado em português na primeira metade do séc. XVI e em espanhol na segunda (1578), em que é empréstimo do português do Brasil ou da sua língua geral. O termo abacaxi também é um termo ameríndio.</p>
+
+		<p>O fruto, quando maduro, tem o sabor bastante ácido e muitas vezes adocicado. Em culinária pode ser utilizado como um poderoso amaciante de carnes. Habitualmente usa-se a polpa da fruta, mas seu miolo e as cascas podem ser aferventadas para produção de sucos.</p>
+        
+        <small><em>Fonte: Wikipedia</em></small>
+	</div>
+	<div id="aba-3">
+		<h3>Cupuaçu</h3>
+        <p><img src="../imagens/cupuacu.png" alt="cupuacu" width="124" height="168" class="esq" />Cupuaçu é o fruto de uma árvore originária da Amazônia brasileira (Theobroma grandiflorum; ex - Sterculiaceae), parente próxima do cacaueiro. A árvore é conhecida como cupuaçuzeiro, cupuaçueiro ou cupu, é uma fruta típica da amazônia brasileira, sobretudo no estado do Pará.</p>
+		<p>A árvore alcança uma média de 10 a 15 m de altura. Há referências de exemplares com até 20 m. As folhas são longas, medindo até 60 cm de comprimento e apresentam uma aparência ferruginosa na face inferior. As flores são grandes, de cor vermelho-escura e apresentam características interessantes: são as maiores do gênero, não crescem grudadas no tronco, como nas outras variedades de theobromáceas, mas sim nos galhos. Os frutos apresentam forma esférica ou ovóide e medem até 25 cm de comprimento, tendo casca dura e lisa, de coloração castanho-escura. As sementes ficam envoltas por uma polpa branca, ácida e aromática. Os frutos surgem de janeiro a maio e são os maiores da família. O cupuaçu contém ferro, fósforo e proteínas, necessários para a formação celular, participando dos processos químicos que permitem a continuação da vida.</p>
+		<small><em>Fonte: Wikipedia</em></small>
+	</div>
+	<div id="aba-4">
+		<h3>Laranja</h3>
+        <p><img src="../imagens/laranjaesq.png" alt="laranja" width="139" height="131" class="esq" /><img src="../imagens/laranjadir.png" alt="laranja" width="135" height="133" class="dir" />A laranja é o fruto produzido pela laranjeira (Citrus x sinensis), uma árvore da família Rutaceae. A laranja é um fruto híbrido, criado na antiguidade a partir do cruzamento do pomelo com a tangerina. O sabor da laranja varia do doce ao levemente ácido. Frequentemente, esta fruta é descascada e comida ao natural, ou espremida para obter sumo.</p>
+		<p class="clear">As pevides (pequenos caroços duros) são habitualmente removidas, embora possam ser usadas em algumas receitas. A casca exterior pode ser usada também em diversos pratos culinários, como ornamento, ou mesmo para dar algum sabor. A camada branca entre a casca e as gomas, de dimensão variável, raramente é utilizada, apesar de ter um sabor levemente doce. É recomendada para "quebrar" o sabor ácido da laranja na boca, após terminar de consumir o fruto.</p>
+		<h5>Valor nutricional</h5>
+    	<p>Cada 100 gramas de laranja (Citrus x sinensis) contém:</p>
+        <ul>
+			<li>Calorias - 65kcal</li>
+			<li>Proteínas - 0,6g</li>
+			<li>Gorduras - 1g</li>
+			<li>Vitamina A - 195 U.l.</li>
+			<li>Vitamina B1 (Tiamina) - 135 µg</li>
+			<li>Vitamina B2 (Riboflavina) - 150 µg</li>
+			<li>Vitamina B3 (Niacina) - 0,25 mg</li>
+			<li>Vitamina C (Ácido ascórbico) - 48 mg</li>
+			<li>Cálcio - 45 mg</li>
+			<li>Potássio - 36 mg</li>
+			<li>Fósforo - 21 mg</li>
+			<li>Sódio - 13 mg</li>
+			<li>Enxofre - 11 mg</li>
+			<li>Magnésio - 8 mg</li>
+			<li>Cloro - 2 mg</li>
+			<li>Silício - 0,45 mg</li>
+			<li>Ferro - 0,2 mg</li>
+		</ul>
+		<small><em>Fonte: Wikipedia</em></small>
+	</div>
+</div>
+
+<p class="tema">Tema: ui-lightness</p>
+</section>
+<footer>	
+	<nav><a href="../c13/exemplo.html">&laquo; anterior</a> | <a href="opcao-disabled.html">próximo &raquo;</a></nav>
+	<input type="button" value="RESET" onclick="window.location.reload()" id="reload" />
+	<div class="clear"></div>	
+</footer>
+</div> <!-- /conteudo -->
+</div> <!-- /tudo -->
+</body>
+</html>

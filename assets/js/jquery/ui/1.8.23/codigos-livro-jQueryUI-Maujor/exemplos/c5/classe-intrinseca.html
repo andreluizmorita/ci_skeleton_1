@@ -1,0 +1,77 @@
+<!DOCTYPE html>
+<html lang="pt-br">
+<head>
+<title>Livro jQuery UI do Maujor</title>
+<meta charset="utf-8" />
+<meta name="keywords" content="jquery,interface de usuário,ui,widgets,interação,javascript, livro maujor, maujor" />
+<meta name="description" content="Página integrante do site de apoio ao livro jQuery UI do Maujor. O site contém todos os exemplos constantes do livro." />
+<meta name="author" content="Maujor" />
+<link rel="shortcut icon" href="/favicon.ico" />
+<link rel="icon" href="/favicon.ico" type="image/x-icon" />
+<link type="text/css" href="css/swanky-purse/jquery-ui-1.8.17.custom.css" rel="stylesheet" />	
+<link href="../estilos.css" rel="stylesheet" type="text/css" /> <!-- CSS para as páginas exemplo -->
+<style>
+.ui-selectable {border:1px dotted blue;}
+.sele1 .ui-selectee {color:#f00;}
+.ui-selecting {background:#0f0; color:#333;}
+.ui-selected {background:#f7b54a; color:#fff}
+.esq, .dir {width:45%;}
+.esq p, .dir p {height:50px;}
+</style>
+<script type="text/javascript" src="../modernizr.js"></script> 
+<script type="text/javascript" src="../jquery-min.js"></script>
+<script type="text/javascript" src="js/jquery-ui-1.8.17.custom.min.js"></script>
+<script>
+//<![CDATA[
+$(function() { 
+	$('.sele, .sele1').selectable();
+});
+// ]]>
+</script>
+</head>
+<body class="cap5">
+<div id="tudo">
+<div id="conteudo">
+<header>	
+	<h1>Capítulo 5 &#8212; Componente Selectable (Selecionar)</h1>
+	<p><a href="../index.html"></a></p>
+	<div class="clear"></div>	
+</header>
+<section>	
+	<h2>Classes intrínsecas <code>ui-selectee</code>, <code>ui-selecting</code>, <code>ui-selected</code></h2>
+	
+	<div class="esq">
+		<p>Selecione e você verá as classes intrínsecas <code>ui-selecting</code>, <code>ui-selected</code> em ação.</p>
+		<ul class="sele">
+			<li>Abacate</li>
+			<li>Abacaxi</li>
+			<li>Banana</li>
+			<li>Cupuaçu</li>
+			<li>Jaca</li>
+			<li>Laranja</li>
+		</ul>
+	</div>
+		
+	<div class="dir">
+		<p>Aqui, usamos também a classe intrínseca <code>ui-selectee</code> para estilizar os itens na cor vermelha.</p>
+		<ul class="sele1">
+			<li>Abacate</li>
+			<li>Abacaxi</li>
+			<li>Banana</li>
+			<li>Cupuaçu</li>
+			<li>Jaca</li>
+			<li>Laranja</li>
+		</ul>
+	</div>
+<div class="clear"></div>
+<p class="tema">Tema: Swanky Purse</p>
+</section>
+<footer>	
+	<nav><a href="selecao-basica.html">&laquo; anterior</a> | <a href="classe-padrao.html">próximo &raquo;</a></nav>
+	<input type="button" value="RESET" onclick="window.location.reload()" id="reload" />
+	<div class="clear"></div>	
+</footer>
+</div> <!-- /conteudo -->
+</div> <!-- /tudo -->
+</body>
+</html>

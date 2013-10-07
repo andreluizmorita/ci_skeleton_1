@@ -1,0 +1,134 @@
+<!DOCTYPE html>
+<html lang="pt-br">
+<head>
+<title>Livro jQuery UI do Maujor</title>
+<meta charset="utf-8" />
+<meta name="keywords" content="jquery,interface de usuário,ui,widgets,interação,javascript, livro maujor, maujor" />
+<meta name="description" content="Página integrante do site de apoio ao livro jQuery UI do Maujor. O site contém todos os exemplos constantes do livro." />
+<meta name="author" content="Maujor" />
+<link rel="shortcut icon" href="/favicon.ico" />
+<link rel="icon" href="/favicon.ico" type="image/x-icon" />
+<link type="text/css" href="css/sunny/jquery-ui-1.8.18.custom.css" rel="stylesheet" />
+<style>
+.ui-autocomplete {
+	font-size:0.8em;
+	max-height:150px;
+	overflow-y:scroll;
+	overflow-x:hidden;
+	padding-right:20px;
+	text-align:left;
+	}
+.ui-autocomplete-loading { background: white url('../imagens/ui-anim_basic_16x16.gif') right center no-repeat; }
+#cidade { width: 18em; }
+table {width:100%; font-size:12px;}
+thead tr {background:#960;} 
+.par {background:#dac7a2;}
+.impar {background:#ece3d1;}
+
+</style>
+<link href="../estilos.css" rel="stylesheet" type="text/css" /> <!-- CSS para as páginas exemplo -->
+<script type="text/javascript" src="../modernizr.js"></script> 
+<script type="text/javascript" src="../jquery-min.js"></script>
+<script type="text/javascript" src="js/jquery-ui-1.8.18.custom.min.js"></script>
+<script>
+//<![CDATA[
+$(function() { 
+		
+$('#paises').change(function() { 
+	var pais = $('#paises :selected').text();
+	var sigla = $('#paises').val();
+		
+	$( "#cidade" ).autocomplete({
+		source: function( request, response ) {
+			$.ajax({
+				url: "http://ws.geonames.org/searchJSON",
+				dataType: "jsonp",
+				data: {
+					country: sigla,
+					username: 'maujor',
+					name_startsWith: request.term
+				},
+				success: function( data ) {
+					response( $.map( data.geonames, function(item) {
+						if (item.countryName === pais) {
+						return {
+							label: item.name+', '+item.adminName1,
+							cidade: item.name,
+							estado: item.adminName1,
+							latitude: item.lat,
+							longitude: item.lng,
+							populacao: item.population ? item.population : 'Não disponível'
+						}
+						} else {return false;}
+					}));
+				}
+			});
+		},
+		minLength: 2,
+		select: function( event, ui ) {
+			if( ui.item) {
+				var linha = $('tr').length;
+				if ( linha%2 == 0) { 
+					var mensagem = '<tr class="par">';	
+				} else {var mensagem = '<tr class="impar">';}
+				mensagem += '<td>'+ pais +'</td><td>'+ ui.item.cidade+'</td><td>' + ui.item.estado + '</td><td>' + ui.item.latitude + '</td><td>' + ui.item.longitude + '</td><td>' + ui.item.populacao + '</td></tr>';
+				$(mensagem).insertAfter('#resultado thead')
+				} else {var mensagem = 'Escolha uma cidade';};
+		},
+	});
+});
+});
+// ]]>
+</script>
+</head>
+<body class="cap8">
+<div id="tudo">
+<div id="conteudo">
+<header>	
+	<h1>Capítulo 8 &#8212; Widget Autocomplete (Autocompletar)</h1>
+	<p><a href="../index.html"></a></p>
+	<div class="clear"></div>	
+</header>
+<section>	
+	<h2>Busca com uso de JSON remoto da API do Geonames</h2>
+	<p class="ui-state-highlight ui-corner-all">Buscar cidades no país 
+    	<select id="paises">
+            <option value="">escolha...</option>
+            <option value="BR">Brazil</option>
+            <option value="AR">Argentina</option>
+            <option value="BO">Bolivia</option>
+            <option value="CL">Chile</option>
+            <option value="CO">Colombia</option>
+            <option value="EC">Ecuador</option>
+            <option value="PY">Paraguay</option>
+            <option value="PE">Peru</option>
+            <option value="PT">Portugal</option>
+        </select>
+    </p>
+	<label for="cidade">Nome da cidade:</label>
+	<input id="cidade" />
+	<small>Powered by <a href="http://geonames.org">geonames.org</a></small>
+	<p style="margin:30px 0 5px 0;">Resultado da busca:</p>
+	<table id="resultado">
+	<thead>        
+        <tr>
+            <th scope="col">País</th>
+            <th scope="col">Cidade</th>
+            <th scope="col">Estado</th>
+            <th scope="col">Latitude</th>
+            <th scope="col">Longitude</th>
+            <th scope="col">População</th>
+        </tr>
+	</thead>        
+    </table>
+<p class="tema">Tema: Sunny</p>
+</section>
+<footer>	
+	<nav><a href="busca-array.html">&laquo; anterior</a> | <a href="../c9/botao-basico.html">próximo &raquo;</a></nav>
+	<input type="button" value="RESET" onclick="window.location.reload()" id="reload" />
+	<div class="clear"></div>	
+</footer>
+</div> <!-- /conteudo -->
+</div> <!-- /tudo -->
+</body>
+</html>

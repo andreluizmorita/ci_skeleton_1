@@ -1,0 +1,40 @@
+<!DOCTYPE html PUBLIC "-//W3C//DTD HTML 4.01 Transitional//EN" "http://www.w3.org/TR/html4/loose.dtd">
+<html>
+<head>
+<meta http-equiv="Content-Type" content="text/html; charset=ISO-8859-1">
+<title>Insert title here</title>
+<script type="text/javascript" src="../../jquery.js"></script>
+<style type="text/css">
+body{ background:#444;}
+.am-tooltips {width:400px; padding:10px; display: none; background:url(img/shadow.png);position:absolute; border-radius:7px; bottom:0; left:30px; }
+.am-tooltips-content { background: #e4e4e4; padding: 15px; color:#666; text-align:justify; font-size:12px; border-radius:5px; border:1px solid #aaa; position:relative;}
+.am-tooltips-triagle{width: 0;height: 0;border-left: 10px solid transparent;border-right: 10px solid transparent;border-top: 10px solid #e4e4e4;margin-top:-1px;margin-left:-5px;left:50%;position:absolute;}
+.am-tooltips-triagle-shadow{width: 0;height: 0;border-left: 8px solid transparent;border-right: 8px solid transparent;border-top: 8px solid rgba(166,166,166,0.55);margin-top:10px;margin-left:-3px;left:50%;position:absolute;}
+
+</style>
+<script type="text/javascript">
+$(document).ready(function(){
+	
+	$('.am-tooltips-content').animate({'height':'300px'},500);
+});
+
+</script>
+
+</head>
+<body>
+
+	<div style="border:3px dashed #ccc; width:800px; height:500px;position:relative;">
+		<div class='am-tooltips' style="display:block;"> 
+			
+			<div class='am-tooltips-content'>
+				Teste de plugin jquery desenvolvido para exibir texto ou imagem em um pequeno balão também conhecido por ToolTips.<br/>
+				Teste de plugin jquery desenvolvido para exibir texto ou imagem em um pequeno balão também conhecido por ToolTips.
+			</div>
+			
+			<div class='am-tooltips-triagle-shadow'></div>
+			<div class='am-tooltips-triagle'></div>
+			
+		</div>
+	</div>
+</body>
+</html>

@@ -1,0 +1,80 @@
+<!DOCTYPE html>
+<html lang="pt-br">
+<head>
+<title>Livro jQuery UI do Maujor</title>
+<meta charset="utf-8" />
+<meta name="keywords" content="jquery,interface de usuário,ui,widgets,interação,javascript, livro maujor, maujor" />
+<meta name="description" content="Página integrante do site de apoio ao livro jQuery UI do Maujor. O site contém todos os exemplos constantes do livro." />
+<meta name="author" content="Maujor" />
+<link rel="shortcut icon" href="/favicon.ico" />
+<link rel="icon" href="/favicon.ico" type="image/x-icon" />
+<link type="text/css" href="css/smoothness/jquery-ui-1.8.18.custom.css" rel="stylesheet" />	
+<link href="../estilos.css" rel="stylesheet" type="text/css" /> <!-- CSS para as páginas exemplo -->
+<style>
+.ui-progressbar {
+	height:20px;
+	margin:0; 
+	padding:0;		
+	}
+#c-pbar {
+	width:300px;
+	height:20px;
+	}
+</style>
+<script type="text/javascript" src="../modernizr.js"></script> 
+<script type="text/javascript" src="../jquery-min.js"></script>
+<script type="text/javascript" src="js/jquery-ui-1.8.18.custom.min.js"></script>
+<script>
+//<![CDATA[
+$(function() {
+	$('.progresso').progressbar().hide();
+	$('#c-pbar span').html('Tarefa concluída!<br />Recarregue a página.').hide();
+	
+	$('#tarefa').bind('click', function() {
+		$('.progresso').progressbar().fadeIn(1500);
+		progresso = setInterval('contaSegundos()', 100);
+	});
+});
+
+var i = 0;
+	function contaSegundos() { 
+		i = i+1;
+		if (i > 100) {
+			clearInterval(progresso); 
+			$('.progresso').fadeOut(1500, function(){
+				$('#c-pbar span').css('display', 'block').show('slow');	
+			}); 
+			$('#tarefa').unbind('click');
+		} else {
+		$('.progresso').progressbar({
+			value: i
+			});
+		}
+	};
+// ]]>
+</script>
+</head>
+<body class="cap12">
+<div id="tudo">
+<div id="conteudo">
+<header>	
+	<h1>Capítulo 12 &#8212; Widget Progressbar (Barra de progresso)</h1>
+	<p><a href="../index.html"></a></p>
+	<div class="clear"></div>	
+</header>
+<section>	
+	<h2>Barra de progresso em ação.</h2>
+	<p class="ui-state-highlight ui-corner-all"><button class="botao" id="tarefa">Iniciar tarefa</button></p>
+	<div id="c-pbar"><span class="msg-fly"></span><p class="progresso"></p></div>
+
+<p class="tema">Tema: Smoothness</p>
+</section>
+<footer>	
+	<nav><a href="barra-animada.html">&laquo; anterior</a> | <a href="opcao-value.html">próximo &raquo;</a></nav>
+	<input type="button" value="RESET" onclick="window.location.reload()" id="reload" />
+	<div class="clear"></div>	
+</footer>
+</div> <!-- /conteudo -->
+</div> <!-- /tudo -->
+</body>
+</html>

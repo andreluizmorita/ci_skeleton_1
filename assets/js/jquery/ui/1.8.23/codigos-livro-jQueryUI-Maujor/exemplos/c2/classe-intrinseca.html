@@ -1,0 +1,58 @@
+<!DOCTYPE html>
+<html lang="pt-br">
+<head>
+<title>Livro jQuery UI do Maujor</title>
+<meta charset="utf-8" />
+<meta name="keywords" content="jquery,interface de usuário,ui,widgets,interação,javascript, livro maujor, maujor" />
+<meta name="description" content="Página integrante do site de apoio ao livro jQuery UI do Maujor. O site contém todos os exemplos constantes do livro." />
+<meta name="author" content="Maujor" />
+<link rel="shortcut icon" href="/favicon.ico" />
+<link rel="icon" href="/favicon.ico" type="image/x-icon" />
+<link type="text/css" href="css/ui-lightness/jquery-ui-1.8.17.custom.css" rel="stylesheet" />	
+<link href="../estilos.css" rel="stylesheet" type="text/css" /> <!-- CSS para as páginas exemplo -->
+<style>
+.drag {
+	cursor: move;
+	color: white;
+	width: 275px; 
+	height: 86px;
+	padding:8px 10px;
+	border-radius:4px;
+	}
+.ui-draggable { background: red; }
+.ui-draggable-dragging { background: black;}
+</style>
+<script type="text/javascript" src="../modernizr.js"></script> 
+<script type="text/javascript" src="../jquery-min.js"></script>
+<script type="text/javascript" src="js/jquery-ui-1.8.17.custom.min.js"></script>
+<script>
+//<![CDATA[
+$(function() { 
+	$('.drag').draggable();		
+});
+// ]]>
+</script>
+</head>
+<body class="cap2">
+<div id="tudo">
+<div id="conteudo">
+<header>	
+	<h1>Capítulo 2 &#8212; Componente Draggable (Arrastar)</h1>
+	<p><a href="../index.html"></a></p>
+	<div class="clear"></div>	
+</header>
+<section>	
+	<h2>Classes <code>ui-draggable</code> e <code>ui-draggable-dragging</code></h2>
+	
+	<div class="drag">Arraste-me que eu mudo de cor, mas somente durante o arraste.</div>
+<p class="tema">Tema: personalizado</p>
+</section>
+<footer>	
+	<nav><a href="arraste-basico.html">&laquo; anterior</a> | <a href="classe-padrao.html">próximo &raquo;</a></nav>
+	<input type="button" value="RESET" onclick="window.location.reload()" id="reload" />
+	<div class="clear"></div>	
+</footer>
+</div> <!-- /conteudo -->
+</div> <!-- /tudo -->
+</body>
+</html>

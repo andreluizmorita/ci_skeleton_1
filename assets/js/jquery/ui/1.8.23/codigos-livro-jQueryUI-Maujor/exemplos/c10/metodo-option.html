@@ -1,0 +1,59 @@
+<!DOCTYPE html>
+<html lang="pt-br">
+<head>
+<title>Livro jQuery UI do Maujor</title>
+<meta charset="utf-8" />
+<meta name="keywords" content="jquery,interface de usuário,ui,widgets,interação,javascript, livro maujor, maujor" />
+<meta name="description" content="Página integrante do site de apoio ao livro jQuery UI do Maujor. O site contém todos os exemplos constantes do livro." />
+<meta name="author" content="Maujor" />
+<link rel="shortcut icon" href="/favicon.ico" />
+<link rel="icon" href="/favicon.ico" type="image/x-icon" />
+<link type="text/css" href="css/blitzer/jquery-ui-1.8.18.custom.css" rel="stylesheet" />	
+<link href="../estilos.css" rel="stylesheet" type="text/css" /> <!-- CSS para as páginas exemplo -->
+<script type="text/javascript" src="../modernizr.js"></script> 
+<script type="text/javascript" src="../jquery-min.js"></script>
+<script type="text/javascript" src="js/jquery-ui-1.8.18.custom.min.js"></script>
+<script src="js/jquery.ui.datepicker-pt-BR.js"></script>
+<script>
+//<![CDATA[
+$(function() { 
+	$('.data').datepicker();	
+	$('#1, #3').css({
+		color: 'white',
+		cursor: 'pointer',
+		background: '#d8331e',
+		padding: '0 4px'
+	}).bind('click', function(event) {
+  		numMeses = parseInt(event.target.id, 10);
+		$('.data').datepicker('option', 'numberOfMonths', numMeses);
+	});
+});
+// ]]>
+</script>
+</head>
+<body class="cap10">
+<div id="tudo">
+<div id="conteudo">
+<header>	
+	<h1>Capítulo 10 &#8212; Widget Datepicker (Seletor de datas)</h1>
+	<p><a href="../index.html"></a></p>
+	<div class="clear"></div>	
+</header>
+<section>	
+	<h2>Método <code>option</code></h2>
+	<p class="ui-state-highlight ui-corner-all"><span id="1">Clique aqui</span> para um datepicker com 1 mês ou <span id="3">clique aqui</span> para um datepicker com 3 meses.</p>
+
+	<label for="data">Data: </label>
+    <input type="text" id="data" class="data" />
+
+<p class="tema">Tema: Blitzer</p>
+</section>
+<footer>	
+	<nav><a href="metodos-disable-enable.html">&laquo; anterior</a> | <a href="metodo-widget.html">próximo &raquo;</a></nav>
+	<input type="button" value="RESET" onclick="window.location.reload()" id="reload" />
+	<div class="clear"></div>	
+</footer>
+</div> <!-- /conteudo -->
+</div> <!-- /tudo -->
+</body>
+</html>

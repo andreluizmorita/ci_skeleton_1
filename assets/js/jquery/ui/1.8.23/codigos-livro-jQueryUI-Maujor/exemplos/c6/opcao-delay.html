@@ -1,0 +1,68 @@
+<!DOCTYPE html>
+<html lang="pt-br">
+<head>
+<title>Livro jQuery UI do Maujor</title>
+<meta charset="utf-8" />
+<meta name="keywords" content="jquery,interface de usuário,ui,widgets,interação,javascript, livro maujor, maujor" />
+<meta name="description" content="Página integrante do site de apoio ao livro jQuery UI do Maujor. O site contém todos os exemplos constantes do livro." />
+<meta name="author" content="Maujor" />
+<link rel="shortcut icon" href="/favicon.ico" />
+<link rel="icon" href="/favicon.ico" type="image/x-icon" />
+<link type="text/css" href="css/le-frog/jquery-ui-1.8.17.custom.css" rel="stylesheet" />	
+<link href="../estilos.css" rel="stylesheet" type="text/css" /> <!-- CSS para as páginas exemplo -->
+<style>
+ul {
+	width:45%;
+	list-style-type:none;
+	margin:0;
+	padding:0;
+	}
+ul li {
+	font-size:1.2em; 
+	margin-bottom:2px;
+	padding:5px 10px; 
+	height:20px;
+	}
+</style>
+<script type="text/javascript" src="../modernizr.js"></script> 
+<script type="text/javascript" src="../jquery-min.js"></script>
+<script type="text/javascript" src="js/jquery-ui-1.8.17.custom.min.js"></script>
+<script>
+//<![CDATA[
+$(function() { 
+	$('.ordem').sortable({delay: 1000});
+});
+// ]]>
+</script>
+</head>
+<body class="cap6">
+<div id="tudo">
+<div id="conteudo">
+<header>	
+	<h1>Capítulo 6 &#8212; Componente Sortable (Ordenar)</h1>
+	<p><a href="../index.html"></a></p>
+	<div class="clear"></div>	
+</header>
+<section>	
+	<h2>Opção <code>delay</code></h2>
+	
+	<p class="ui-state-highlight">Opção <code>delay: 1000</code>. Clique e espere 1 segundo para iniciar o arraste.</p>
+	<ul class="ordem">
+		<li class="ui-state-default">1 - Abacate</li>
+		<li class="ui-state-default">2 - Abacaxi</li>
+		<li class="ui-state-default">3 - Banana</li>
+		<li class="ui-state-default">4 - Cupuaçu</li>
+		<li class="ui-state-default">5 - Jaca</li>
+		<li class="ui-state-default">6 - Laranja</li>
+	</ul>
+<p class="tema">Tema: Le Frog</p>
+</section>
+<footer>	
+	<nav><a href="opcao-cursorat.html">&laquo; anterior</a> | <a href="opcao-distance.html">próximo &raquo;</a></nav>
+	<input type="button" value="RESET" onclick="window.location.reload()" id="reload" />
+	<div class="clear"></div>	
+</footer>
+</div> <!-- /conteudo -->
+</div> <!-- /tudo -->
+</body>
+</html>

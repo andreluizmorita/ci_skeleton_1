@@ -1,0 +1,78 @@
+<!DOCTYPE html>
+<html lang="pt-br">
+<head>
+<title>Livro jQuery UI do Maujor</title>
+<meta charset="utf-8" />
+<meta name="keywords" content="jquery,interface de usuário,ui,widgets,interação,javascript, livro maujor, maujor" />
+<meta name="description" content="Página integrante do site de apoio ao livro jQuery UI do Maujor. O site contém todos os exemplos constantes do livro." />
+<meta name="author" content="Maujor" />
+<link rel="shortcut icon" href="/favicon.ico" />
+<link rel="icon" href="/favicon.ico" type="image/x-icon" />
+<link type="text/css" href="css/le-frog/jquery-ui-1.8.17.custom.css" rel="stylesheet" />	
+<link href="../estilos.css" rel="stylesheet" type="text/css" /> <!-- CSS para as páginas exemplo -->
+<style>
+ul {
+	list-style-type:none;
+	margin:0;
+	padding:0;
+}
+ul li {
+	font-size:1.2em; 
+	margin-bottom:2px;
+	padding:5px 10px; 
+	height:20px;
+	}
+.esq, .dir {width:45%}
+</style>
+<script type="text/javascript" src="../modernizr.js"></script> 
+<script type="text/javascript" src="../jquery-min.js"></script>
+<script type="text/javascript" src="js/jquery-ui-1.8.17.custom.min.js"></script>
+<script>
+//<![CDATA[
+$(function() { 
+	$('.ordem, .ordem1').sortable({connectWith: '.conectar'});
+});
+// ]]>
+</script>
+</head>
+<body class="cap6">
+<div id="tudo">
+<div id="conteudo">
+<header>	
+	<h1>Capítulo 6 &#8212; Componente Sortable (Ordenar)</h1>
+	<p><a href="../index.html"></a></p>
+	<div class="clear"></div>	
+</header>
+<section>	
+	<h2>Opção <code>connectWith</code></h2>
+	
+	<p class="ui-state-highlight">Arraste e ordene de uma lista para outra.</p>
+	<ul class="ordem esq conectar">
+		<li class="ui-state-default">1A - Abacate</li>
+		<li class="ui-state-default">2A - Abacaxi</li>
+		<li class="ui-state-default">3A - Banana</li>
+		<li class="ui-state-default">4A - Cupuaçu</li>
+		<li class="ui-state-default">5A - Jaca</li>
+		<li class="ui-state-default">6A - Laranja</li>
+	</ul>
+
+	<ul class="ordem1 dir conectar">
+		<li class="ui-widget-content">1B - Abacate</li>
+		<li class="ui-widget-content">2B - Abacaxi</li>
+		<li class="ui-widget-content">3B - Banana</li>
+		<li class="ui-widget-content">4B - Cupuaçu</li>
+		<li class="ui-widget-content">5B - Jaca</li>
+		<li class="ui-widget-content">6B - Laranja</li>
+	</ul>
+<div class="clear"></div>	
+<p class="tema">Tema: Le Frog</p>
+</section>
+<footer>	
+	<nav><a href="opcao-cancel.html">&laquo; anterior</a> | <a href="opcao-containment.html">próximo &raquo;</a></nav>
+	<input type="button" value="RESET" onclick="window.location.reload()" id="reload" />
+	<div class="clear"></div>	
+</footer>
+</div> <!-- /conteudo -->
+</div> <!-- /tudo -->
+</body>
+</html>

@@ -1,0 +1,66 @@
+<!DOCTYPE html>
+<html lang="pt-br">
+<head>
+<title>Livro jQuery UI do Maujor</title>
+<meta charset="utf-8" />
+<meta name="keywords" content="jquery,interface de usuário,ui,widgets,interação,javascript, livro maujor, maujor" />
+<meta name="description" content="Página integrante do site de apoio ao livro jQuery UI do Maujor. O site contém todos os exemplos constantes do livro." />
+<meta name="author" content="Maujor" />
+<link rel="shortcut icon" href="/favicon.ico" />
+<link rel="icon" href="/favicon.ico" type="image/x-icon" />
+<link type="text/css" href="css/ui-lightness/jquery-ui-1.8.17.custom.css" rel="stylesheet" />	
+<link href="../estilos.css" rel="stylesheet" type="text/css" /> <!-- CSS para as páginas exemplo -->
+<style>
+.drag, .drag1, .drag2, .drag3 {
+	float:left;
+	color: #ffe290;
+	width: 180px; 
+	height: 80px;
+	padding: 10px;
+	border-radius: 4px;
+	}
+.drag, .drag2 {margin-right:250px;}
+.drag, .drag2, .drag3 { margin-bottom:15px; background: #d04000 url(../imagens/grid-10x10.png) 0 0;}
+.drag1 { margin-bottom:15px; background: #d04000 url(../imagens/x120.png) 120px 0 repeat-y; }
+input {display:block;}
+</style>
+<script type="text/javascript" src="../modernizr.js"></script> 
+<script type="text/javascript" src="../jquery-min.js"></script>
+<script type="text/javascript" src="js/jquery-ui-1.8.17.custom.min.js"></script>
+<script>
+//<![CDATA[
+$(function() { 
+	$('.drag').draggable({cursorAt: {left:40, top:80}});
+	$('.drag1').draggable({ cursorAt: {left: 120}})
+	$('.drag2').draggable({ cursorAt: {left: 100, bottom: 90}})
+	$('.drag3').draggable({ cursorAt: {right: 0, bottom: 0}})
+});
+// ]]>
+</script>
+</head>
+<body class="cap2">
+<div id="tudo">
+<div id="conteudo">
+<header>	
+	<h1>Capítulo 2 &#8212; Componente Draggable (Arrastar)</h1>
+	<p><a href="../index.html"></a></p>
+	<div class="clear"></div>	
+</header>
+<section>	
+	<h2>Opção <code>cursorAt</code></h2>
+	<div class="drag">Arraste-me!<br />Cursor nas coordenadas: left:40, top:80</div>
+	<div class="drag1">Arraste-me!<br />Cursor nas coordenadas: left: 120</div>
+	<div class="drag2">Arraste-me!<br />Cursor nas coordenadas: left: 100, bottom: 90</div>
+	<div class="drag3">Arraste-me!<br />Cursor nas coordenadas: right: 0, bottom: 0</div>
+<div class="clear"></div>	
+<p class="tema">Tema: personalizado</p>
+</section>
+<footer>	
+	<nav><a href="opcao-cursor.html">&laquo; anterior</a> | <a href="opcao-delay.html">próximo &raquo;</a></nav>
+	<input type="button" value="RESET" onclick="window.location.reload()" id="reload" />
+	<div class="clear"></div>	
+</footer>
+</div> <!-- /conteudo -->
+</div> <!-- /tudo -->
+</body>
+</html>

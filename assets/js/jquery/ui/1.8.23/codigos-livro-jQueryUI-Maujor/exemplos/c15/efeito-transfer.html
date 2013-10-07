@@ -1,0 +1,74 @@
+<!DOCTYPE html>
+<html lang="pt-br">
+<head>
+<title>Livro jQuery UI do Maujor</title>
+<meta charset="utf-8" />
+<meta name="keywords" content="jquery,interface de usuário,ui,widgets,interação,javascript, livro maujor, maujor" />
+<meta name="description" content="Página integrante do site de apoio ao livro jQuery UI do Maujor. O site contém todos os exemplos constantes do livro." />
+<meta name="author" content="Maujor" />
+<link rel="shortcut icon" href="/favicon.ico" />
+<link rel="icon" href="/favicon.ico" type="image/x-icon" />
+<link type="text/css" href="css/cupertino/jquery-ui-1.8.18.custom.css" rel="stylesheet" />	
+<link href="../estilos.css" rel="stylesheet" type="text/css" /> <!-- CSS para as páginas exemplo -->
+<link href="efeitos.css" rel="stylesheet" type="text/css" /> <!-- CSS para o box do capítulo efeitos -->
+<style>
+#cesta {
+		border:1px solid black;
+		width:100px;
+		height:100px;
+		overflow: auto;
+		margin-top:40px;
+		clear:both;
+		}
+.ui-effects-transfer {
+		background:#f90;
+		}
+#minHeight>img {
+	float:left;
+	margin:0 20px 50px 0;
+	}
+</style>
+<script type="text/javascript" src="../modernizr.js"></script> 
+<script type="text/javascript" src="../jquery-min.js"></script>
+<script type="text/javascript" src="js/jquery-ui-1.8.18.custom.min.js"></script>
+<script>
+//<![CDATA[
+$(function() { 
+	$('#minHeight>img').click(function() {
+		$(this).effect('transfer', {to:  $('#cesta')}, 1000, function(){
+		var fruta = $(this).attr('alt');	
+			$('#cesta').append(fruta +'<br />')	
+		});
+	});
+});
+// ]]>
+</script>
+</head>
+<body class="cap15">
+<div id="tudo">
+<div id="conteudo">
+<header>	
+	<h1>Capítulo 15 &#8212; Efeitos</h1>
+	<p><a href="../index.html"></a></p>
+	<div class="clear"></div>	
+</header>
+<section>	
+<div id="minHeight">
+	<p class="ui-state-highlight ui-corner-all">Efeito Transfer - Clique a fruta.</p>  
+		<img src="../imagens/abacate.png"  alt="abacate" width="75" height="47" />
+		<img src="../imagens/abacaxi.png"  alt="abacaxi" width="72" height="77" />
+		<img src="../imagens/cupuacu.png"  alt="cupuaçu" width="42" height="58" />
+		<img src="../imagens/laranjaesq.png"  alt="laranja" width="47" height="44" />
+    <div class="ui-state-highlight ui-corner-all" id="cesta"></div>
+</div>    
+<p class="tema">Tema: Cupertino</p>
+</section>
+<footer>	
+	<nav><a href="efeito-size.html">&laquo; anterior</a> | <a href="../c16/temas-na-pagina.html">próximo &raquo;</a></nav>
+	<input type="button" value="RESET" onclick="window.location.reload()" id="reload" />
+	<div class="clear"></div>	
+</footer>
+</div> <!-- /conteudo -->
+</div> <!-- /tudo -->
+</body>
+</html>

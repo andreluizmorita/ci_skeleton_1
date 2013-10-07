@@ -1,0 +1,59 @@
+<!DOCTYPE html>
+<html lang="pt-br">
+<head>
+<title>Livro jQuery UI do Maujor</title>
+<meta charset="utf-8" />
+<meta name="keywords" content="jquery,interface de usuário,ui,widgets,interação,javascript, livro maujor, maujor" />
+<meta name="description" content="Página integrante do site de apoio ao livro jQuery UI do Maujor. O site contém todos os exemplos constantes do livro." />
+<meta name="author" content="Maujor" />
+<link rel="shortcut icon" href="/favicon.ico" />
+<link rel="icon" href="/favicon.ico" type="image/x-icon" />
+<link type="text/css" href="css/trontastic/jquery-ui-1.8.18.custom.css" rel="stylesheet" />	
+<link href="../estilos.css" rel="stylesheet" type="text/css" /> <!-- CSS para as páginas exemplo -->
+<script type="text/javascript" src="../modernizr.js"></script> 
+<script type="text/javascript" src="../jquery-min.js"></script>
+<script type="text/javascript" src="js/jquery-ui-1.8.18.custom.min.js"></script>
+<script>
+//<![CDATA[
+$(function() { 
+	$('.btn').button();	
+});
+// ]]>
+</script>
+</head>
+<body class="cap9">
+<div id="tudo">
+<div id="conteudo">
+<header>	
+	<h1>Capítulo 9 &#8212; Widget Button (Botão)</h1>
+	<p><a href="../index.html"></a></p>
+	<div class="clear"></div>	
+</header>
+<section>	
+	<h2>Botão básico</h2>
+	<p class="ui-state-highlight ui-corner-all">Observe a seguir as cinco implementações básicas do widget Button.</p>
+
+	<p><button type="button" class="btn">Button</button> &rArr; Usando o elemento <code>button</code></p>
+	<p><input type="submit" value="Submit" class="btn" /> &rArr; Usando o elemento <code>input</code> com atributo <code>type</code> com valor <code>submit</code></p>
+	<p><input type="reset" value="Reset" class="btn" /> &rArr; Usando o elemento <code>input</code> com atributo <code>type</code> com valor <code>reset</code></p>
+	<p><input type="button" value="Button" class="btn" /> &rArr; Usando o elemento <code>button</code> com atributo <code>type</code> com valor <code>button</code></p>
+    <p><a href="#" class="btn">Link</a> &rArr; Usando o elemento <code>a</code></p>
+<hr />
+	<p class="ui-state-highlight ui-corner-all">Observe a seguir renderização padrão dos botões acima.</p>
+    <p><button type="button">Button</button> &rArr; Usando o elemento <code>button</code></p>
+	<p><input type="submit" value="Submit" /> &rArr; Usando o elemento <code>input</code> com atributo <code>type</code> com valor <code>submit</code></p>
+	<p><input type="reset" value="Reset" /> &rArr; Usando o elemento <code>input</code> com atributo <code>type</code> com valor <code>reset</code></p>
+	<p><input type="button" value="Button" /> &rArr; Usando o elemento <code>button</code> com atributo <code>type</code> com valor <code>buttom</code></p>
+    <p><a href="#">Link</a> &rArr; Usando o elemento <code>a</code></p>
+
+<p class="tema">Tema: Trontastic</p>
+</section>
+<footer>	
+	<nav><a href="../c8/busca-json.html">&laquo; anterior</a> | <a href="opcao-disabled.html">próximo &raquo;</a></nav>
+	<input type="button" value="RESET" onclick="window.location.reload()" id="reload" />
+	<div class="clear"></div>	
+</footer>
+</div> <!-- /conteudo -->
+</div> <!-- /tudo -->
+</body>
+</html>

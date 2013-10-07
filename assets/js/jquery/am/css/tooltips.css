@@ -1,0 +1,9 @@
+.am-tooltips {width: 249px; padding-top:11px; display: none;position: absolute; background: transparent url(../img/top.png) no-repeat top; z-index:10000; }
+.am-tooltips-mid { background: transparent url(../img/middle.png) repeat-y; padding: 9px 25px 15px 25px; color:#666; text-align:justify; font-size:12px; }
+.am-tooltips-btm { background: transparent url(../img/bottom.png) no-repeat bottom; height: 24px; }
+.am-tooltips-load { width:25px; height:25px; margin:10px auto; background:url('../img/load-black-25.gif') no-repeat; }
+
+.am-tooltips-css { width:300px; padding:10px; display:none; background:url(../img/shadow.png);position:absolute; border-radius:7px; z-index:10000; }
+.am-tooltips-css-content { background: #e4e4e4; padding: 15px; color:#666; text-align:justify; font-size:12px; border-radius:5px; border:1px solid #aaa; position:relative;}
+.am-tooltips-css-triagle{width: 0;height: 0;border-left: 10px solid transparent; border-right: 10px solid transparent;border-top: 10px solid #e4e4e4;margin-top:-1px;margin-left:-5px;left:50%;position:absolute;}
+.am-tooltips-css-triagle-shadow{width: 0;height: 0;border-left: 8px solid transparent;border-right: 8px solid transparent;border-top: 8px solid rgba(166,166,166,0.55);margin-top:10px;margin-left:-3px;left:50%;position:absolute;}

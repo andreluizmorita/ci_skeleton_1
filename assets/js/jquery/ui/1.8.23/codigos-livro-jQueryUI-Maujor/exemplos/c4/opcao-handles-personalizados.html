@@ -1,0 +1,87 @@
+<!DOCTYPE html>
+<html lang="pt-br">
+<head>
+<title>Livro jQuery UI do Maujor</title>
+<meta charset="utf-8" />
+<meta name="keywords" content="jquery,interface de usuário,ui,widgets,interação,javascript, livro maujor, maujor" />
+<meta name="description" content="Página integrante do site de apoio ao livro jQuery UI do Maujor. O site contém todos os exemplos constantes do livro." />
+<meta name="author" content="Maujor" />
+<link rel="shortcut icon" href="/favicon.ico" />
+<link rel="icon" href="/favicon.ico" type="image/x-icon" />
+<link type="text/css" href="css/blitzer/jquery-ui-1.8.17.custom.css" rel="stylesheet" />	
+<link href="../estilos.css" rel="stylesheet" type="text/css" /> <!-- CSS para as páginas exemplo -->
+<style>
+.redim {
+	width:130px; 
+	height:165px;
+	padding:0 10px;
+	margin-left:275px;
+	}
+.redim .ui-resizable-nw {
+	background:url(../imagens/handle-nw.png) no-repeat; 
+	width:7px; 
+	height:7px; 
+	left:0; 
+	top:0;
+	}
+.redim .ui-resizable-e {
+	background:url(../imagens/handle-e.png) repeat-y; 
+	right:-7px; 
+	top:0;
+	}
+.redim .ui-resizable-n {
+	background:url(../imagens/handle-n.png) no-repeat; 
+	left:50%; 
+	top:-7px;
+	}
+section {min-height:250px;max-height:500px; overflow:auto;}
+</style>
+<script type="text/javascript" src="../modernizr.js"></script> 
+<script type="text/javascript" src="../jquery-min.js"></script>
+<script type="text/javascript" src="js/jquery-ui-1.8.17.custom.min.js"></script>
+<script>
+//<![CDATA[
+$(function(){ 
+	var opcoesHandles = {
+	handles: {
+		n: '.ui-resizable-n',
+		e: '.ui-resizable-e',
+		nw: '.ui-resizable-nw'
+	}
+};
+	$('.redim').resizable(opcoesHandles);
+});
+// ]]>
+</script>
+</head>
+<body class="cap4">
+<div id="tudo">
+<div id="conteudo">
+<header>	
+	<h1>Capítulo 4 &#8212; Componente Resizable (Redimensionar)</h1>
+	<p><a href="../index.html"></a></p>
+	<div class="clear"></div>	
+</header>	
+<section>	
+	<h2>Opção <code>handles</code> personalizados</h2>
+	
+	<div class="redim ui-widget-content ui-corner-all">
+		<div class="ui-resizable-handle ui-resizable-n"></div>
+		<div class="ui-resizable-handle ui-resizable-e"></div>
+		<div class="ui-resizable-handle ui-resizable-nw"></div>
+		
+		<h3 class="ui-widget-header">Redimensione-me!</h3>
+		<p>Eu serei redimensionado se você arrastar meu lado superior, direito ou o canto superior esquerdo.</p>
+	</div>
+<p class="tema">Tema: blitzer</p>
+</section>
+<footer>	
+	<nav><a href="opcao-handles.html">&laquo; anterior</a> | <a href="opcao-helper.html">próximo &raquo;</a></nav>
+	<input type="button" value="RESET" onclick="window.location.reload()" id="reload" />
+	<div class="clear"></div>	
+</footer>
+</div> <!-- /conteudo -->
+</div> <!-- /tudo -->
+</body>
+</html>
+

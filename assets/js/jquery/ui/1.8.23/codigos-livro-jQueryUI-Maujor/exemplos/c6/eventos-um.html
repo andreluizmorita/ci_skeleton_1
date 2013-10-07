@@ -1,0 +1,124 @@
+<!DOCTYPE html>
+<html lang="pt-br">
+<head>
+<title>Livro jQuery UI do Maujor</title>
+<meta charset="utf-8" />
+<meta name="keywords" content="jquery,interface de usuário,ui,widgets,interação,javascript, livro maujor, maujor" />
+<meta name="description" content="Página integrante do site de apoio ao livro jQuery UI do Maujor. O site contém todos os exemplos constantes do livro." />
+<meta name="author" content="Maujor" />
+<link rel="shortcut icon" href="/favicon.ico" />
+<link rel="icon" href="/favicon.ico" type="image/x-icon" />
+<link type="text/css" href="css/le-frog/jquery-ui-1.8.17.custom.css" rel="stylesheet" />	
+<link href="../estilos.css" rel="stylesheet" type="text/css" /> <!-- CSS para as páginas exemplo -->
+<style>
+ul {
+	width:300px;
+	list-style-type:none;
+	margin:0;
+	padding:0; 
+	}
+ul li {
+	font-size:1.2em; 
+	margin-bottom:2px;
+	padding:5px 10px; 
+	height:20px;
+	}
+ol {
+	width:300px;
+	padding:5px 10px;
+	margin:0;
+	}
+li span {float:right;}
+.pholder {background:blue;}
+</style>
+<script type="text/javascript" src="../modernizr.js"></script> 
+<script type="text/javascript" src="../jquery-min.js"></script>
+<script type="text/javascript" src="js/jquery-ui-1.8.17.custom.min.js"></script>
+<script>
+//<![CDATA[
+$(function() { 
+	var opcoesOrdem = {
+		placeholder: 'pholder',
+		revert: true,
+		start: function(event, ui) {
+			$('.msg')
+			.css('visibility', 'hidden');
+			$('.msg').eq(0)
+			.css('visibility', 'visible')			
+			.html('Começou o arraste<br />Foi disparado o evento: '+event.type);
+		},
+		sort: function(event, ui) {
+			var x = ui.position.left;			
+			$('.msg').eq(1)
+			.css('visibility', 'visible')			
+			.html('Arraste em andamento '+x+'<br />Foi disparado o evento: '+event.type)
+		},
+		change: function(event, ui) {
+			$('.msg').eq(2)
+			.css('visibility', 'visible')			
+			.html('DOM modificado<br />Foi disparado o evento: '+event.type)
+		},
+		beforeStop: function(event, ui) {
+			$('.msg').eq(3)
+			.css('visibility', 'visible')			
+			.html('Ordenação terminada<br />Foi disparado o evento: '+event.type)
+		},
+		stop: function(event, ui) {
+			$('.msg').eq(4)
+			.css('visibility', 'visible')			
+			.html('Ordenação terminada<br />Foi disparado o evento: '+event.type)
+		},
+		update: function(event, ui) {
+			$('.msg').eq(5)
+			.css('visibility', 'visible')			
+			.html('Ordenação terminada, DOM modificado<br />Foi disparado o evento: '+event.type)
+		}
+	};	
+	$('.ordem').sortable(opcoesOrdem);
+});
+// ]]>
+</script>
+</head>
+<body class="cap6">
+<div id="tudo">
+<div id="conteudo">
+<header>	
+	<h1>Capítulo 6 &#8212; Componente Sortable (Ordenar)</h1>
+	<p><a href="../index.html"></a></p>
+	<div class="clear"></div>	
+</header>
+<section>	
+	<h2>Eventos <code>start</code>, <code>sort</code>, <code>change</code> , <code>beforeStop</code>, <code>stop</code>, <code>update</code></h2>
+	<p class="ui-state-highlight">Ordene um item para disparar os eventos.<br />Experimente deslocar levemente um item para a direita e soltá-lo, nesse caso os eventos 3 e 6, <code>change</code> e <code>update</code> não serão disparados.</p>
+<div class="esq">	
+	<ul class="ordem">
+		<li class="ui-state-default">1 - Abacate<span class="ui-icon ui-icon-triangle-2-n-s"></span></li>
+		<li class="ui-state-default">2 - Abacaxi<span class="ui-icon ui-icon-triangle-2-n-s"></span></li>
+		<li class="ui-state-default">3 - Banana<span class="ui-icon ui-icon-triangle-2-n-s"></span></li>
+		<li class="ui-state-default">4 - Cupuaçu<span class="ui-icon ui-icon-triangle-2-n-s"></span></li>
+		<li class="ui-state-default">5 - Jaca<span class="ui-icon ui-icon-triangle-2-n-s"></span></li>
+		<li class="ui-state-default">6 - Laranja<span class="ui-icon ui-icon-triangle-2-n-s"></span></li>
+	</ul>
+</div>
+<div class="dir">	
+	<ol>
+		<li class="msg"></li>
+		<li class="msg"></li>
+		<li class="msg"></li>
+		<li class="msg"></li>
+		<li class="msg"></li>
+		<li class="msg"></li>
+	</ol>
+</div>
+<div class="clear"></div>
+<p class="tema">Tema: Le Frog</p>
+</section>
+<footer>	
+	<nav><a href="evento-create.html">&laquo; anterior</a> | <a href="eventos-dois.html">próximo &raquo;</a></nav>
+	<input type="button" value="RESET" onclick="window.location.reload()" id="reload" />
+	<div class="clear"></div>	
+</footer>
+</div> <!-- /conteudo -->
+</div> <!-- /tudo -->
+</body>
+</html>

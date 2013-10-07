@@ -1,0 +1,76 @@
+<!DOCTYPE html>
+<html lang="pt-br">
+<head>
+<title>Livro jQuery UI do Maujor</title>
+<meta charset="utf-8" />
+<meta name="keywords" content="jquery,interface de usuário,ui,widgets,interação,javascript, livro maujor, maujor" />
+<meta name="description" content="Página integrante do site de apoio ao livro jQuery UI do Maujor. O site contém todos os exemplos constantes do livro." />
+<meta name="author" content="Maujor" />
+<link rel="shortcut icon" href="/favicon.ico" />
+<link rel="icon" href="/favicon.ico" type="image/x-icon" />
+<link type="text/css" href="css/sunny/jquery-ui-1.8.18.custom.css" rel="stylesheet" />
+<link href="../estilos.css" rel="stylesheet" type="text/css" /> <!-- CSS para as páginas exemplo -->
+<script type="text/javascript" src="../modernizr.js"></script> 
+<script type="text/javascript" src="../jquery-min.js"></script>
+<script type="text/javascript" src="js/jquery-ui-1.8.18.custom.min.js"></script>
+<script>
+//<![CDATA[
+$(function() { 
+	var opcoesBusca = {
+		source: [
+		{label: 'Abacate', descricao: 'O abacate é o pseudofruto comestível do abacateiro (Persea americana), uma árvore da família da laureáceas nativa do México ou da América do Sul.', url: '../imagens/abacate.png'},
+		{label: 'Abacaxi', descricao: 'Ananás ou abacaxi é uma planta monocotiledônea da família das bromeliáceas, subfamília Bromelioideae.', url: '../imagens/abacaxi.png'},
+		{label: 'Cupuaçu', descricao: 'Cupuaçu é o fruto de uma árvore originária da Amazônia brasileira (Theobroma grandiflorum; ex - Sterculiaceae), parente próxima do cacaueiro.', url: '../imagens/cupuacu.png'},
+		{label: 'Laranja', descricao: 'A laranja é o fruto produzido pela laranjeira (Citrus x sinensis), uma árvore da família Rutaceae. A laranja é um fruto híbrido, criado na antiguidade a partir do cruzamento do pomelo com a tangerina.', url: '../imagens/laranjaesq.png'},
+		],
+		minLength: 0,
+		
+		open: function() {
+			$('#resultado').remove();
+		},
+		select: function(event, ui) {
+			$('<div/>', {
+			'id': 'resultado'
+			}).css({
+				marginTop: '30px',
+				width: '500px',
+				overflow: 'auto'
+				
+				})
+			.attr('class', 'ui-state-highlight ui-corner-all')
+			.insertAfter('#frutas');
+			var resultado = '<h3 style="color:#960;">Resultado da busca para a fruta: '+ui.item.label+'</h3>';
+			resultado += '<p><img src='+ui.item.url+' style="float:left;" />'+ui.item.descricao+'</p>';
+			$('#resultado').html(resultado); 
+		}
+	};
+
+	$('.frutas').autocomplete(opcoesBusca);
+});
+// ]]>
+</script>
+</head>
+<body class="cap8">
+<div id="tudo">
+<div id="conteudo">
+<header>	
+	<h1>Capítulo 8 &#8212; Widget Autocomplete (Autocompletar)</h1>
+	<p><a href="../index.html"></a></p>
+	<div class="clear"></div>	
+</header>
+<section>	
+	<h2>Exemplo: Busca com uso de array de objetos</h2>
+	<p class="ui-state-highlight ui-corner-all">Busca por uma descrição sumária para frutas. Digite uma letra no campo para as opções de frutas.</p>
+	<label for="frutas">Buscar: </label>
+	<input class="frutas" id="frutas" />
+<p class="tema">Tema: Sunny</p>
+</section>
+<footer>	
+	<nav><a href="metodos-search-close.html">&laquo; anterior</a> | <a href="busca-json.html">próximo &raquo;</a></nav>
+	<input type="button" value="RESET" onclick="window.location.reload()" id="reload" />
+	<div class="clear"></div>	
+</footer>
+</div> <!-- /conteudo -->
+</div> <!-- /tudo -->
+</body>
+</html>

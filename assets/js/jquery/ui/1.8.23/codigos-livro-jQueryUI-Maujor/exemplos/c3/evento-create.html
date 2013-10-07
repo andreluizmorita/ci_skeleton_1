@@ -1,0 +1,69 @@
+<!DOCTYPE html>
+<html lang="pt-br">
+<head>
+<title>Livro jQuery UI do Maujor</title>
+<meta charset="utf-8" />
+<meta name="keywords" content="jquery,interface de usuário,ui,widgets,interação,javascript, livro maujor, maujor" />
+<meta name="description" content="Página integrante do site de apoio ao livro jQuery UI do Maujor. O site contém todos os exemplos constantes do livro." />
+<meta name="author" content="Maujor" />
+<link rel="shortcut icon" href="/favicon.ico" />
+<link rel="icon" href="/favicon.ico" type="image/x-icon" />
+<link type="text/css" href="css/hot-sneaks/jquery-ui-1.8.17.custom.css" rel="stylesheet" />	
+<link href="../estilos.css" rel="stylesheet" type="text/css" /> <!-- CSS para as páginas exemplo -->
+<style>
+.drop {
+	width:180px; 
+	height:100px;
+	padding:0 10px;
+	}
+button {margin-bottom:20px;}
+</style>
+<script type="text/javascript" src="../modernizr.js"></script> 
+<script type="text/javascript" src="../jquery-min.js"></script>
+<script type="text/javascript" src="js/jquery-ui-1.8.17.custom.min.js"></script>
+<script>
+//<![CDATA[
+$(function() { 
+	$('#criar').bind('click', function() {criarSoltar()}); 	
+});
+
+function criarSoltar() {
+	$('.drop').remove();
+	$('button').eq(0).after('<div class="drop ui-widget-content ui-corner-all"><h3 class="ui-widget-header">área de soltura</h3><p>Eu sou uma área de soltura criada com uso de JavaScript.</p></div>');
+	$('.drop').droppable({
+		create: function(event, ui) { 
+			$('#msg')
+			.css('visibility', 'visible')
+			.html('Foi criada uma área de soltura<br />e disparado o evento tipo: '+event.type);
+		}
+		});		
+}
+// ]]>
+</script>
+</head>
+<body class="cap3">
+<div id="tudo">
+<div id="conteudo">
+<header>	
+	<h1>Capítulo 3 &#8212; Componente Droppable (Soltar)</h1>
+	<p><a href="../index.html"></a></p>
+	<div class="clear"></div>	
+</header>
+<section>	
+	<h2>Evento <code>create</code></h2>
+<div class="esq">	
+	<button type="button" class="botao" id="criar">Criar área de soltura</button>
+</div>	
+	<p id="msg" class="dir"></p>
+<div class="clear"></div>	
+<p class="tema">Tema: hot-sneaks</p>
+</section>
+<footer>	
+	<nav><a href="opcao-tolerance.html">&laquo; anterior</a> | <a href="evento-activate.html">próximo &raquo;</a></nav>
+	<input type="button" value="RESET" onclick="window.location.reload()" id="reload" />
+	<div class="clear"></div>	
+</footer>
+</div> <!-- /conteudo -->
+</div> <!-- /tudo -->
+</body>
+</html>

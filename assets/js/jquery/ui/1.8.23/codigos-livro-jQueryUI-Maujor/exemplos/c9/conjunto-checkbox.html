@@ -1,0 +1,65 @@
+<!DOCTYPE html>
+<html lang="pt-br">
+<head>
+<title>Livro jQuery UI do Maujor</title>
+<meta charset="utf-8" />
+<meta name="keywords" content="jquery,interface de usuário,ui,widgets,interação,javascript, livro maujor, maujor" />
+<meta name="description" content="Página integrante do site de apoio ao livro jQuery UI do Maujor. O site contém todos os exemplos constantes do livro." />
+<meta name="author" content="Maujor" />
+<link rel="shortcut icon" href="/favicon.ico" />
+<link rel="icon" href="/favicon.ico" type="image/x-icon" />
+<link type="text/css" href="css/trontastic/jquery-ui-1.8.18.custom.css" rel="stylesheet" />	
+<link href="../estilos.css" rel="stylesheet" type="text/css" /> <!-- CSS para as páginas exemplo -->
+<script type="text/javascript" src="../modernizr.js"></script> 
+<script type="text/javascript" src="../jquery-min.js"></script>
+<script type="text/javascript" src="js/jquery-ui-1.8.18.custom.min.js"></script>
+<script>
+//<![CDATA[
+$(function() { 
+	$('#chbox').css({
+		color: 'white',
+		cursor: 'pointer',
+		background: '#f00',
+		padding: '0 4px'
+	}).bind('click', function() {
+		$('#checkboxes').buttonset('destroy');
+	});
+	$('#checkboxes').buttonset();
+});
+// ]]>
+</script>
+</head>
+<body class="cap9">
+<div id="tudo">
+<div id="conteudo">
+<header>	
+	<h1>Capítulo 9 &#8212; Widget Button (Botão)</h1>
+	<p><a href="../index.html"></a></p>
+	<div class="clear"></div>	
+</header>
+<section>	
+	<h2>Agrupamento de botões tipo <code>checkbox</code></h2>
+	<p class="ui-state-highlight ui-corner-all"><span id="chbox">Clique aqui</span> para inspecionar a renderização da estrutura HTML padrão do conjunto de botões <code>checkbox</code>. Recarregue a página para voltar ao estado inicial.</p>
+	
+    <h3>Informe as frutas que você não gosta.</h3>
+	<p id="checkboxes">
+        <input type="checkbox" id="aba" />
+        <label for="aba">Abacate</label>    
+        <input type="checkbox" id="abx" />
+        <label for="abx">Abacaxi</label>    
+        <input type="checkbox" id="cup" />
+        <label for="cup">Cupuaçu</label>    
+        <input type="checkbox" id="lar" />
+        <label for="lar">Laranja</label>    
+	</p>
+<p class="tema">Tema: Trontastic</p>
+</section>
+<footer>	
+	<nav><a href="metodo-widget.html">&laquo; anterior</a> | <a href="conjunto-radio.html">próximo &raquo;</a></nav>
+	<input type="button" value="RESET" onclick="window.location.reload()" id="reload" />
+	<div class="clear"></div>	
+</footer>
+</div> <!-- /conteudo -->
+</div> <!-- /tudo -->
+</body>
+</html>

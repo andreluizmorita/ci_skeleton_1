@@ -1,0 +1,109 @@
+<!DOCTYPE html>
+<html lang="pt-br">
+<head>
+<title>Livro jQuery UI do Maujor</title>
+<meta charset="utf-8" />
+<meta name="keywords" content="jquery,interface de usuário,ui,widgets,interação,javascript, livro maujor, maujor" />
+<meta name="description" content="Página integrante do site de apoio ao livro jQuery UI do Maujor. O site contém todos os exemplos constantes do livro." />
+<meta name="author" content="Maujor" />
+<link rel="shortcut icon" href="/favicon.ico" />
+<link rel="icon" href="/favicon.ico" type="image/x-icon" />
+<link type="text/css" href="css/humanity/jquery-ui-1.8.18.custom.css" rel="stylesheet" />	
+<link href="../estilos.css" rel="stylesheet" type="text/css" /> <!-- CSS para as páginas exemplo -->
+<script type="text/javascript" src="../modernizr.js"></script> 
+<script type="text/javascript" src="../jquery-min.js"></script>
+<script type="text/javascript" src="js/jquery-ui-1.8.18.custom.min.js"></script>
+<script>
+//<![CDATA[
+$(function() { 
+	$('#abrir').click(function() {
+		$('.dialogo').dialog('open')
+	});
+	$('.dialogo').dialog({
+	autoOpen: false,	
+	create: function(event, ui) {
+		console.log('EVENTO: create');
+		console.log('Foi disparado e evento: '+event.type);
+		console.log(ui);
+		console.log('**********************');
+	},
+	beforeClose: function(event, ui) {
+		console.log('\nEVENTO: beforeClose');
+		console.log('Foi disparado e evento: '+event.type);
+		console.log(ui);
+		console.log('**********************');
+	},
+	open: function(event, ui) {
+		console.log('EVENTO: open');
+		console.log('Foi disparado e evento: '+event.type);
+		console.log(ui);
+		console.log('**********************');
+	},
+	focus: function(event, ui) {
+		console.log('EVENTO: focus');
+		console.log('Foi disparado e evento: '+event.type);
+		console.log(ui);
+		console.log('**********************');
+	},
+	dragStart: function(event, ui) {
+		console.log('EVENTO: dragStart');
+		console.log('Foi disparado e evento: '+event.type);
+		console.log(ui);
+		console.log('**********************');
+	},
+	dragStop: function(event, ui) {
+		console.log('EVENTO: dragStop');
+		console.log('Foi disparado e evento: '+event.type);
+		console.log(ui);
+		console.log('**********************');
+	},
+	resizeStart: function(event, ui) {
+		console.log('EVENTO: resizeStart');
+		console.log('Foi disparado e evento: '+event.type);
+		console.log(ui);
+		console.log('**********************');
+	},
+	resizeStop: function(event, ui) {
+		console.log('EVENTO: resizeStop')
+		console.log('Foi disparado e evento: '+event.type);
+		console.log(ui);
+		console.log('**********************');
+	}, 	
+	close: function(event, ui) {
+		console.log('EVENTO: close');
+		console.log('Foi disparado e evento: '+event.type);
+		console.log(ui);
+		console.log('**********************');
+	}
+	});	
+});
+// ]]>
+</script>
+</head>
+<body class="cap11">
+<div id="tudo">
+<div id="conteudo">
+<header>	
+	<h1>Capítulo 11 &#8212; Widget Dialog (Janela de diálogo)</h1>
+	<p><a href="../index.html"></a></p>
+	<div class="clear"></div>	
+</header>
+<section>	
+	<h2>Eventos</h2>
+	<p class="ui-state-highlight ui-corner-all">Abra o console do navegador e interaja com a janela de diálogo para observar o disparo dos eventos desse widget. <button type="button" class="botao" id="abrir">Abrir janela</button></p>
+	<div class="dialogo" title="Janela de diálogo básica">
+		<h4>Abacate</h4>
+		<p><img src="../imagens/abacate.png" alt="abacate" width="113" height="70" class="esq" />O abacate é o pseudofruto comestível do abacateiro (Persea americana), uma árvore da família da laureáceas nativa do México ou da América do Sul, hoje extensamente cultivada em regiões tropicais, inclusive nas Ilhas Canárias e na Ilha da Madeira.</p>
+	</div>
+
+<p class="tema">Tema: Humanity</p>
+</section>
+<footer>	
+	<nav><a href="opcao-position.html">&laquo; anterior</a> | <a href="metodo-destroy.html">próximo &raquo;</a></nav>
+	<input type="button" value="RESET" onclick="window.location.reload()" id="reload" />
+	<div class="clear"></div>	
+</footer>
+</div> <!-- /conteudo -->
+</div> <!-- /tudo -->
+</body>
+</html>

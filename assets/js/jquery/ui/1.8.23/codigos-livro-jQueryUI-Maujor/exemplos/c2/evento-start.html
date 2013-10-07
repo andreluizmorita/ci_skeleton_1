@@ -1,0 +1,85 @@
+<!DOCTYPE html>
+<html lang="pt-br">
+<head>
+<title>Livro jQuery UI do Maujor</title>
+<meta charset="utf-8" />
+<meta name="keywords" content="jquery,interface de usuário,ui,widgets,interação,javascript, livro maujor, maujor" />
+<meta name="description" content="Página integrante do site de apoio ao livro jQuery UI do Maujor. O site contém todos os exemplos constantes do livro." />
+<meta name="author" content="Maujor" />
+<link rel="shortcut icon" href="/favicon.ico" />
+<link rel="icon" href="/favicon.ico" type="image/x-icon" />
+<link type="text/css" href="css/ui-lightness/jquery-ui-1.8.17.custom.css" rel="stylesheet" />	
+<link href="../estilos.css" rel="stylesheet" type="text/css" /> <!-- CSS para as páginas exemplo -->
+<style>
+.drag {
+	width:180px; 
+	height:120px;
+	padding:0 10px;
+	}
+</style>
+<script type="text/javascript" src="../modernizr.js"></script> 
+<script type="text/javascript" src="../jquery-min.js"></script>
+<script type="text/javascript" src="js/jquery-ui-1.8.17.custom.min.js"></script>
+<script>
+//<![CDATA[
+$(function() { 
+	var opcoesArrastar = {
+	helper: 'clone',
+	opacity: 0.8,
+	cursorAt : {left:60, top:58},
+	start: function(event, ui) {
+		var mensagem = '<p>Disparado o evento tipo: '+event.type+'</p>';
+		mensagem += '<p>Coordenadas relativas do Helper</p>';
+		mensagem += '<ul><li>X= '+ui.position.left+'</li>';
+		mensagem += '<li>Y= '+ui.position.top+'</li>';
+		mensagem += '</ul>'
+		mensagem += '<p>Coordenadas absolutas do Helper</p>';
+		mensagem += '<ul><li>X= '+ui.offset.left+'</li>';
+		mensagem += '<li>Y= '+ui.offset.top+'</li>';
+		mensagem += '</ul>'
+		mensagem += '<p>Texto no Helper</p>';
+		mensagem += '<ul><li>'+ui.helper.text()+'</li>';
+		mensagem += '</ul>'
+			$('#msg')
+			.css('visibility', 'visible')
+			.html(mensagem);
+	}
+	};
+	$('.drag').draggable(opcoesArrastar);		
+		$('.drag').bind('dragstart', function() {
+			$(this).html('O arraste começou!');  
+			$('.drag').draggable({disabled: true});
+		});
+});
+// ]]>
+</script>
+</head>
+<body class="cap2">
+<div id="tudo">
+<div id="conteudo">
+<header>	
+	<h1>Capítulo 2 &#8212; Componente Draggable (Arrastar)</h1>
+	<p><a href="../index.html"></a></p>
+	<div class="clear"></div>	
+</header>
+<section>	
+	<h2>Evento <code>start</code></h2>
+<div class="esq">	
+	<div class="drag  ui-widget-content ui-corner-all">
+		<h3 class="ui-widget-header">Arraste-me!</h3>
+	    <p>...para disparar o evento <code>start</code>.</p>
+	</div>
+</div>	
+	<p id="msg" class="dir"></p>
+<div class="clear"></div>	
+<p class="tema">Tema: ui-lightness</p>
+</section>
+<footer>	
+	<nav><a href="evento-create.html">&laquo; anterior</a> | <a href="evento-drag.html">próximo &raquo;</a></nav>
+	<input type="button" value="RESET" onclick="window.location.reload()" id="reload" />
+	<div class="clear"></div>	
+</footer>
+</div> <!-- /conteudo -->
+</div> <!-- /tudo -->
+</body>
+</html>

@@ -1,0 +1,140 @@
+<!DOCTYPE html>
+<html lang="pt-br">
+<head>
+<title>Livro jQuery UI do Maujor</title>
+<meta charset="utf-8" />
+<meta name="keywords" content="jquery,interface de usuário,ui,widgets,interação,javascript, livro maujor, maujor" />
+<meta name="description" content="Página integrante do site de apoio ao livro jQuery UI do Maujor. O site contém todos os exemplos constantes do livro." />
+<meta name="author" content="Maujor" />
+<link rel="shortcut icon" href="/favicon.ico" />
+<link rel="icon" href="/favicon.ico" type="image/x-icon" />
+<link type="text/css" href="css/le-frog/jquery-ui-1.8.17.custom.css" rel="stylesheet" />	
+<link href="../estilos.css" rel="stylesheet" type="text/css" /> <!-- CSS para as páginas exemplo -->
+<style>
+ul {
+	list-style-type:none;
+	margin:0;
+	padding:0;
+}
+ul li {
+	font-size:1.2em; 
+	margin-bottom:2px;
+	padding:5px 10px; 
+	height:20px;
+	}
+.ordem, .ordem1 {width:180px}
+.dir {width:300px;margin-top:-2px;}
+.msg {margin:2px 0;}
+</style>
+<script type="text/javascript" src="../modernizr.js"></script> 
+<script type="text/javascript" src="../jquery-min.js"></script>
+<script type="text/javascript" src="js/jquery-ui-1.8.17.custom.min.js"></script>
+<script>
+//<![CDATA[
+$(function() { 
+	var opcoesOrdem = {
+		connectWith: '.conectar',
+		start: function(event, ui) {
+			$('.msg').css('visibility', 'hidden');
+		},
+		
+		activate: function(event, ui) {
+			$('.msg');
+			$('.msg').eq(0)
+			.css('visibility', 'visible')			
+			.html('activate<br />Foi disparado o evento: '+event.type);
+		},
+
+		over: function(event, ui) {
+			$('.msg');
+			$('.msg').eq(1)
+			.css('visibility', 'visible')			
+			.html('Um item de uma lista está sobre a outra lista<br />Foi disparado o evento: '+event.type);
+		},
+
+		out: function(event, ui) {
+			$('.msg');
+			$('.msg').eq(2)
+			.css('visibility', 'visible')			
+			.html('Um item foi movido<br />Foi disparado o evento: '+event.type);
+		},
+
+		remove: function(event, ui) {
+			$('.msg');
+			$('.msg').eq(4)
+			.css('visibility', 'visible')			
+			.html('Um item foi removido de uma das listas<br />Foi disparado o evento: '+event.type);
+		},
+		
+		receive: function(event, ui) {
+			$('.msg');
+			$('.msg').eq(3)
+			.css('visibility', 'visible')			
+			.html('Uma das listas recebeu um item da outra<br />Foi disparado o evento: '+event.type);
+		},
+		
+		deactivate: function(event, ui) {
+			$('.msg');
+			$('.msg').eq(5)
+			.css('visibility', 'visible')			
+			.html('deactivate<br />Foi disparado o evento: '+event.type);
+		}
+	
+	}
+	$('.ordem, .ordem1').sortable(opcoesOrdem);
+});
+// ]]>
+</script>
+</head>
+<body class="cap6">
+<div id="tudo">
+<div id="conteudo">
+<header>	
+	<h1>Capítulo 6 &#8212; Componente Sortable (Ordenar)</h1>
+	<p><a href="../index.html"></a></p>
+	<div class="clear"></div>	
+</header>
+<section>	
+	<h2>Eventos <code>activate</code>, <code>over</code>, <code>out</code>, <code>receive</code>, <code>remove</code>, <code>deactivate</code></h2>
+	
+	<p class="ui-state-highlight">Arraste e ordene de uma lista para outra e dispare os eventos.</p>
+	<ul class="ordem esq conectar">
+		<li class="ui-state-default">1A - Abacate</li>
+		<li class="ui-state-default">2A - Abacaxi</li>
+		<li class="ui-state-default">3A - Banana</li>
+		<li class="ui-state-default">4A - Cupuaçu</li>
+		<li class="ui-state-default">5A - Jaca</li>
+		<li class="ui-state-default">6A - Laranja</li>
+	</ul>
+
+	<ul class="ordem1 esq conectar">
+		<li class="ui-widget-content">1B - Abacate</li>
+		<li class="ui-widget-content">2B - Abacaxi</li>
+		<li class="ui-widget-content">3B - Banana</li>
+		<li class="ui-widget-content">4B - Cupuaçu</li>
+		<li class="ui-widget-content">5B - Jaca</li>
+		<li class="ui-widget-content">6B - Laranja</li>
+	</ul>
+<div class="dir">	
+		<p class="msg"></p>
+		<p class="msg"></p>
+		<p class="msg"></p>
+		<p class="msg"></p>
+		<p class="msg"></p>
+		<p class="msg"></p>
+</div>
+<div class="clear"></div>	
+
+
+
+<p class="tema">Tema: Le Frog</p>
+</section>
+<footer>	
+	<nav><a href="eventos-um.html">&laquo; anterior</a> | <a href="metodo-destroy.html">próximo &raquo;</a></nav>
+	<input type="button" value="RESET" onclick="window.location.reload()" id="reload" />
+	<div class="clear"></div>	
+</footer>
+</div> <!-- /conteudo -->
+</div> <!-- /tudo -->
+</body>
+</html>

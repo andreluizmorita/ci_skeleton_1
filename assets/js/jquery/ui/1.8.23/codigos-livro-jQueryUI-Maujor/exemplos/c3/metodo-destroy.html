@@ -1,0 +1,76 @@
+<!DOCTYPE html>
+<html lang="pt-br">
+<head>
+<title>Livro jQuery UI do Maujor</title>
+<meta charset="utf-8" />
+<meta name="keywords" content="jquery,interface de usuário,ui,widgets,interação,javascript, livro maujor, maujor" />
+<meta name="description" content="Página integrante do site de apoio ao livro jQuery UI do Maujor. O site contém todos os exemplos constantes do livro." />
+<meta name="author" content="Maujor" />
+<link rel="shortcut icon" href="/favicon.ico" />
+<link rel="icon" href="/favicon.ico" type="image/x-icon" />
+<link type="text/css" href="css/hot-sneaks/jquery-ui-1.8.17.custom.css" rel="stylesheet" />	
+<link href="../estilos.css" rel="stylesheet" type="text/css" /> <!-- CSS para as páginas exemplo -->
+<style>
+.drag {
+	cursor:default;
+	color:white;
+	background:#d04000;
+	width:150px; 
+	height:100px;
+	padding:5px 10px;
+	border-radius:4px;
+	}
+.drop {
+	padding:5px 10px;
+	border:5px solid black;
+	border-radius:15px;
+	margin-bottom:15px;
+	width:230px;
+	height:130px;
+	}
+</style>
+<script type="text/javascript" src="../modernizr.js"></script> 
+<script type="text/javascript" src="../jquery-min.js"></script>
+<script type="text/javascript" src="js/jquery-ui-1.8.17.custom.min.js"></script>
+<script>
+//<![CDATA[
+$(function() { 
+	$('.drag').draggable({revert: 'invalid'});
+	$('.drop').droppable({accept: '.drag'});
+	$('.dir button').bind('click', function() {
+		$('.drop').droppable('destroy');
+	});
+});
+// ]]>
+</script>
+</head>
+<body class="cap3">
+<div id="tudo">
+<div id="conteudo">
+<header>	
+	<h1>Capítulo 3 &#8212; Componente Droppable (Soltar)</h1>
+	<p><a href="../index.html"></a></p>
+	<div class="clear"></div>	
+</header>
+<section>	
+	<h2>Método <code>destroy</code></h2>
+<div class="esq">	
+	<div class="drag">Arraste-me e solte-me!<br />Depois clique o botão <code>RESET</code> e em seguida <code>destroy</code> e tente soltar-me novamente.</div>
+</div>	
+
+<div class="dir">	
+	<div class="drop">Área de soltura.</div>
+	<button type="button" class="botao">destroy</button>
+</div>	
+	<div class="clear"></div>	
+<p class="tema">Tema: personalizado</p>
+</section>
+<footer>	
+	<nav><a href="evento-drop.html">&laquo; anterior</a> | <a href="metodos-disable-enable.html">próximo &raquo;</a></nav>
+	<input type="button" value="RESET" onclick="window.location.reload()" id="reload" />
+	<div class="clear"></div>	
+</footer>
+</div> <!-- /conteudo -->
+</div> <!-- /tudo -->
+</body>
+</html>

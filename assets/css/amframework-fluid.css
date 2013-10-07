@@ -1,0 +1,55 @@
+/* --- Grid fluidos (%) --- */
+.aMLine{overflow: hidden;_overflow:visible;_zoom:1;}
+
+.aM1of1 ,.aM1of2 ,.aM1of3 ,.aM2of3 ,.aM1of4 ,.aM2of4 ,.aM3of4 ,.aM1of5 ,.aM2of5 ,.aM3of5 ,.aM4of5,.aM1of6,.aM2of6,.aM3of6,.aM4of6,.aM5of6,
+.aM1of7,.aM2of7,.aM3of7,.aM4of7,.aM5of7,.aM6of7,.aM1of8,.aM2of8,.aM3of8,.aM4of8,.aM5of8,.aM6of8,.aM7of8,.aM1of9,.aM2of9,.aM3of9,.aM4of9,
+.aM5of9,.aM6of9,.aM7of9,.aM8of9,.aM1of10,.aM2of10,.aM3of10,.aM4of10,.aM5of10,.aM6of10,.aM7of10,.aM8of10,.aM9of10{ float:left; }
+
+.aM1of1{width:100%;}
+.aM1of2{width:50%;}
+.aM1of3{width:33.33333%;}
+    .aM2of3{width:66.66666%;}
+.aM1of4{width:25%;}
+    .aM2of4{width:50%;}
+    .aM3of4{width:75%;}
+.aM1of5{width:20%;}
+    .aM2of5{width:40%;}
+    .aM3of5{width:60%;}
+    .aM4of5{width:80%;}
+.aM1of6{width:16.66666%;}
+    .aM2of6{width:33.33333%;}
+    .aM3of6{width:49.99998%;}
+    .aM4of6{width:66.66666%;}
+    .aM5of6{width:83.33333%;}
+.aM1of7{width:14.28571%;}
+    .aM2of7{width:28.57142%;}
+    .aM3of7{width:42.85714%;}
+    .aM4of7{width:57.14285%;}
+    .aM5of7{width:71.42857%;}
+    .aM6of7{width:85.71428%;}
+.aM1of8{width:12.5%;}
+    .aM2of8{width:25%;}
+    .aM3of8{width:37.5%;}
+    .aM4of8{width:50%;}
+    .aM5of8{width:62.5%;}
+    .aM6of8{width:75%;}
+    .aM7of8{width:87.5%;}
+.aM1of9{width:11.11111%;}
+    .aM2of9{width:22.22222%;}
+    .aM3of9{width:33.33333%;}
+    .aM4of9{width:44.44444%;}
+    .aM5of9{width:55.55555%;}
+    .aM6of9{width:66.66666%;}
+    .aM7of9{width:77.77777%;}
+    .aM8of9{width:88.88888%;}
+.aM1of10{width:10%;}
+    .aM2of10{width:20%;}
+    .aM3of10{width:30%;}
+    .aM4of10{width:40%;}
+    .aM5of10{width:50%;}
+    .aM6of10{width:60%;}
+    .aM7of10{width:70%;}
+    .aM8of10{width:80%;}
+    .aM9of10{width:90%;}
+
+.aM0of0 { float:none; _position:relative; _left:-3px; _margin-right: -3px;width:auto; overflow: hidden;_overflow:visible;_zoom:1;}

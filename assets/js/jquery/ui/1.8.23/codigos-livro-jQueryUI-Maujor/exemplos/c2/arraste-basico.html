@@ -1,0 +1,61 @@
+<!DOCTYPE html>
+<html lang="pt-br">
+<head>
+<title>Livro jQuery UI do Maujor</title>
+<meta charset="utf-8" />
+<meta name="keywords" content="jquery,interface de usuário,ui,widgets,interação,javascript, livro maujor, maujor" />
+<meta name="description" content="Página integrante do site de apoio ao livro jQuery UI do Maujor. O site contém todos os exemplos constantes do livro." />
+<meta name="author" content="Maujor" />
+<link rel="shortcut icon" href="/favicon.ico" />
+<link rel="icon" href="/favicon.ico" type="image/x-icon" />
+<link type="text/css" href="css/ui-lightness/jquery-ui-1.8.17.custom.css" rel="stylesheet" />	
+<link href="../estilos.css" rel="stylesheet" type="text/css" /> <!-- CSS para as páginas exemplo -->
+<style>
+.drag {cursor:move;color:#ffe290;}
+div.drag {
+	width:275px; 
+	height:86px;
+	background:#d04000;
+	padding:8px 10px;
+	border-radius:4px;
+	}
+p.drag {background:#800000;}
+</style>
+<script type="text/javascript" src="../modernizr.js"></script> 
+<script type="text/javascript" src="../jquery-min.js"></script>
+<script type="text/javascript" src="js/jquery-ui-1.8.17.custom.min.js"></script>
+<script>
+//<![CDATA[
+$(function() { 
+	$('.drag').draggable();		
+});
+// ]]>
+</script>
+</head>
+<body class="cap2">
+<div id="tudo">
+<div id="conteudo">
+<header>	
+	<h1>Capítulo 2 &#8212; Componente Draggable (Arrastar)</h1>
+	<p><a href="../index.html"></a></p>
+	<div class="clear"></div>	
+</header>
+<section>	
+	<h2>Arraste básico</h2>
+	<p>Se você arrastar os elementos arrastáveis para fora dos limites da tela causará o aparecimento de barras de rolagem tanto na vertical como na horizontal.</p>
+	<div class="drag">Eu sou um div arrastável.</div>
+	<p class="drag">Eu sou um parágrafo e posso ser arrastado.</p>
+	<p>Eu também sou um parágrafo, mas não posso ser arrastado.</p>
+	<p>A imagem a seguir pode ser arrastada, mas eu não posso.<p>
+	<img src="../imagens/logo-jqUI.png" alt="logo jQuery UI" width="275" height="86" class="drag" />
+<p class="tema">Tema: personalizado</p>
+</section>
+<footer>	
+	<nav><a href="../c1/template-dos-exemplos.html">&laquo; anterior</a> | <a href="classe-intrinseca.html">próximo &raquo;</a></nav>
+	<input type="button" value="RESET" onclick="window.location.reload()" id="reload" />
+	<div class="clear"></div>	
+</footer>
+</div> <!-- /conteudo -->
+</div> <!-- /tudo -->
+</body>
+</html>

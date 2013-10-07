@@ -1,0 +1,129 @@
+<!DOCTYPE html>
+<html lang="pt-br">
+<head>
+<title>Livro jQuery UI do Maujor</title>
+<meta charset="utf-8" />
+<meta name="keywords" content="jquery,interface de usuário,ui,widgets,interação,javascript, livro maujor, maujor" />
+<meta name="description" content="Página integrante do site de apoio ao livro jQuery UI do Maujor. O site contém todos os exemplos constantes do livro." />
+<meta name="author" content="Maujor" />
+<link rel="shortcut icon" href="/favicon.ico" />
+<link rel="icon" href="/favicon.ico" type="image/x-icon" />
+<link type="text/css" href="css/cupertino/jquery-ui-1.8.18.custom.css" rel="stylesheet" />	
+<link href="../estilos.css" rel="stylesheet" type="text/css" /> <!-- CSS para as páginas exemplo -->
+<style>
+.desliza, .desliza1 {
+	width:260px;
+	margin:5px 0 -10px 0;
+	}
+
+.c1 {
+	width:300px;
+	padding:10px 20px;
+	}
+.c2 {
+	position:relative;
+	z-index:10;
+	width:250px;
+	height:180px;
+	border:2px solid #09c;
+	background:#fff1a0;	
+	margin:0 55px 30px 0;
+	}
+
+.c1 span {
+	width:25px;
+	height:25px;
+	border-radius:5px;
+	background:white;
+	line-height:23px;
+	text-align:center;
+	font-size:14px;
+	font-weight:bold; 
+	}
+#abacate {
+	position:absolute;
+	top:150px;
+	left:400px;
+	z-index:5;
+	}
+</style>
+<script type="text/javascript" src="../modernizr.js"></script> 
+<script type="text/javascript" src="../jquery-min.js"></script>
+<script type="text/javascript" src="js/jquery-ui-1.8.18.custom.min.js"></script>
+<script>
+//<![CDATA[
+$(function() { 
+	var opcoesBorda = {
+		min: 0, 
+		max: 90,
+		slide: function(event, ui) {
+			$(this).next().text(ui.value);
+				var bordaTl = $('#tl').slider('option', 'value');
+				var bordaTr = $('#tr').slider('option', 'value');
+				var bordaBr = $('#br').slider('option', 'value');
+				var bordaBl = $('#bl').slider('option', 'value');
+				$('.c2').css('borderRadius', bordaTl+'px '+bordaTr+'px '+bordaBr+'px '+bordaBl+'px')
+		}
+	}
+	$('.desliza').slider(opcoesBorda);
+
+	var opcoesOpacidade = {
+		min: 0, 
+		max: 1,
+		value: 1,
+		step: 0.1,
+		create: function() {
+			$(this).next().text('1');	
+		},
+		slide: function(event, ui) {
+			$(this).next().text(ui.value);
+			$('.c2').css('opacity', ui.value);
+		}
+	}
+	$('.desliza1').slider(opcoesOpacidade);
+});
+// ]]>
+</script>
+</head>
+<body class="cap13">
+<div id="tudo">
+<div id="conteudo">
+<header>	
+	<h1>Capítulo 13 &#8212; Widget Slider (Controle deslizante)</h1>
+	<p><a href="../index.html"></a></p>
+	<div class="clear"></div>	
+</header>
+<section>	
+	<h2>Exemplo de uso de controles deslizantes</h2>
+	<p class="ui-state-highlight ui-corner-all">Escolha os raios das bordas e a opacidade.</p>
+	<div class="c1 esq ui-state-highlight ui-corner-all">   
+    	top-left
+        <div id="tl" class="esq desliza"></div><span class="dir">0</span>
+    	<div class="clear"></div>
+    	top-right
+        <div id="tr" class="esq desliza"></div><span class="dir">0</span>
+    	<div class="clear"></div>
+        bottom-right
+        <div id="br" class="esq desliza"></div><span class="dir">0</span>
+    	<div class="clear"></div>
+    	bottom-left
+        <div id="bl" class="esq desliza"></div><span class="dir">0</span>
+    	<div class="clear"></div>
+    	opacity
+        <div id="opacidade" class="esq desliza1"></div><span class="dir">0</span>
+        <div class="clear"></div>
+    </div>
+	<div id="abacate"><img src="../imagens/abacate.png" width="226" height="140" alt="abacate" /></div>
+	<div class="c2 dir"></div>  
+
+<p class="tema">Tema: Cupertino</p>
+</section>
+<footer>	
+	<nav><a href="metodo-widget.html">&laquo; anterior</a> | <a href="../c14/abas-basico.html">próximo &raquo;</a></nav>
+	<input type="button" value="RESET" onclick="window.location.reload()" id="reload" />
+	<div class="clear"></div>	
+</footer>
+</div> <!-- /conteudo -->
+</div> <!-- /tudo -->
+</body>
+</html>

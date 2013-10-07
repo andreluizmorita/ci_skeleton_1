@@ -1,0 +1,146 @@
+<!DOCTYPE html>
+<html lang="pt-br">
+<head>
+<title>Livro jQuery UI do Maujor</title>
+<meta charset="utf-8" />
+<meta name="keywords" content="jquery,interface de usuário,ui,widgets,interação,javascript, livro maujor, maujor" />
+<meta name="description" content="Página integrante do site de apoio ao livro jQuery UI do Maujor. O site contém todos os exemplos constantes do livro." />
+<meta name="author" content="Maujor" />
+<link rel="shortcut icon" href="/favicon.ico" />
+<link rel="icon" href="/favicon.ico" type="image/x-icon" />
+<link type="text/css" href="css/trontastic/jquery-ui-1.8.18.custom.css" rel="stylesheet" />	
+<style>
+#edicao {
+	position:relative;
+	z-index:5;
+	width: 600px;
+	height: 200px; 
+	overflow-y:scroll;
+	border: 2px solid #ccc;	
+	padding: 25px 20px 10px 20px;
+	margin:0;
+	}
+#bferramentas {
+	position:relative;
+	z-index:10;
+	margin:20px 0 -20px 20px;
+	}
+</style>
+<link href="../estilos.css" rel="stylesheet" type="text/css" /> <!-- CSS para as páginas exemplo -->
+<script type="text/javascript" src="../modernizr.js"></script> 
+<script type="text/javascript" src="../jquery-min.js"></script>
+<script type="text/javascript" src="js/jquery-ui-1.8.18.custom.min.js"></script>
+<script>
+//<![CDATA[
+$(function() { 
+	$('#bferramentas').buttonset();
+	$('.btn').button({text: false});
+	
+	function mostrarDica() {
+		$('.dica')
+		.css({
+			position: 'absolute',
+			right: '20px',
+			top: '5px'
+			})				
+		.fadeOut(3500);
+	};
+	
+	$('#btn1').button({icons: {primary: 'ui-icon-locked'}})
+	.click(function() { 
+		$('.dica').remove(); //previne duas dicas em cliques rápidos
+		var options;
+			if ( $( this ).text() === "editar" ) {
+				
+				$('#edicao').attr('contenteditable', true)
+				.prepend('<p class="dica ui-state-highlight ui-corner-all">Agora essa área é editável.</p>');
+				mostrarDica();
+				options = {
+					label: 'neditar',
+					icons: {primary: 'ui-icon-unlocked'}
+				};
+			} else {  
+				$('.dica').remove(); //previne duas dicas em cliques rápidos
+				$('#edicao').removeAttr('contenteditable', true)	
+				.prepend('<p class="dica ui-state-highlight ui-corner-all">Agora essa área não é editável</p>')
+				mostrarDica();
+				options = {
+					label: 'editar',
+					icons: {primary: 'ui-icon-locked'}
+				};
+			};
+			$( this ).button( 'option', options );
+	});
+	
+	$('#btn2').button({icons: {primary: 'ui-icon-zoomin'}})
+	.click(function() {
+		var tamFonte = parseInt($('#edicao').css('fontSize')); 
+		$('#edicao').css('fontSize', (tamFonte+5)+'px');
+	});
+	
+	$('#btn3').button({icons: {primary: 'ui-icon-zoomout'}})
+	.click(function() {
+		var tamFonte = parseInt($('#edicao').css('fontSize')); 
+		$('#edicao').css('fontSize', (tamFonte-5)+'px');
+	});
+	
+	$('#btn4').button({icons: {primary: 'ui-icon-clock'}})
+	.click(function() {
+		var data = new Date();
+		var hora = data.getHours(); 
+		var min = data.getMinutes();
+		var seg = data.getSeconds();
+		var clock = hora +':'+ min +':'+seg+'h';    
+		$('#edicao').append(' '+clock);
+	});
+	
+	$('#btn5').button({icons: {primary: 'ui-icon-scissors'}})
+	.click(function() {
+		$('#edicao').empty();
+	});
+	
+	$('#btn6').button({icons: {primary: 'ui-icon-help'}})
+	.click(function() {
+		$('#edicao').prepend('<p class="dica ui-state-highlight ui-corner-all">Esse botão está inativo.</p>');
+		mostrarDica();
+	});
+});
+// ]]>
+</script>
+</head>
+<body class="cap9">
+<div id="tudo">
+<div id="conteudo">
+<header>	
+	<h1>Capítulo 9 &#8212; Widget Button (Botão)</h1>
+	<p><a href="../index.html"></a></p>
+	<div class="clear"></div>	
+</header>
+<section>	
+	<h2>Barra ferramentas</h2>
+	<p class="ui-state-highlight ui-corner-all">Agrupando botões para formar uma barra de ferramentas.</p>
+
+	<p id="bferramentas">
+        <button type="button" id="btn1" class="btn">editar</button>
+        <button type="button" id="btn2" class="btn">Zoom +</button>
+        <button type="button" id="btn3" class="btn">Zoom -</button>
+        <button type="button" id="btn4" class="btn">Hora</button>
+        <button type="button" id="btn5" class="btn">Apagar tudo</button>
+        <button type="button" id="btn6" class="btn">Ajuda</button>
+	</p>
+
+    <div id="edicao" class="ui-state-highlight ui-corner-all">
+        Área de edição
+    </div>
+
+<p class="tema">Tema: Trontastic</p>
+</section>
+<footer>	
+	<nav><a href="selecionar-limpar.html">&laquo; anterior</a> | <a href="../c10/datepicker-basico.html">próximo &raquo;</a></nav>
+	<input type="button" value="RESET" onclick="window.location.reload()" id="reload" />
+	<div class="clear"></div>	
+</footer>
+</div> <!-- /conteudo -->
+</div> <!-- /tudo -->
+</body>
+</html>

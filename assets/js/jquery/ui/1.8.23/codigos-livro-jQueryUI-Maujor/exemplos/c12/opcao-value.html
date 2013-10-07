@@ -1,0 +1,60 @@
+<!DOCTYPE html>
+<html lang="pt-br">
+<head>
+<title>Livro jQuery UI do Maujor</title>
+<meta charset="utf-8" />
+<meta name="keywords" content="jquery,interface de usuário,ui,widgets,interação,javascript, livro maujor, maujor" />
+<meta name="description" content="Página integrante do site de apoio ao livro jQuery UI do Maujor. O site contém todos os exemplos constantes do livro." />
+<meta name="author" content="Maujor" />
+<link rel="shortcut icon" href="/favicon.ico" />
+<link rel="icon" href="/favicon.ico" type="image/x-icon" />
+<link type="text/css" href="css/smoothness/jquery-ui-1.8.18.custom.css" rel="stylesheet" />	
+<link href="../estilos.css" rel="stylesheet" type="text/css" /> <!-- CSS para as páginas exemplo -->
+<style>
+.ui-progressbar {
+	width:300px;
+	height:15px;		
+	}
+.ui-progressbar-value { background-image: url(../imagens/pbar-animada.gif); }
+</style>
+<script type="text/javascript" src="../modernizr.js"></script> 
+<script type="text/javascript" src="../jquery-min.js"></script>
+<script type="text/javascript" src="js/jquery-ui-1.8.18.custom.min.js"></script>
+<script>
+//<![CDATA[
+$(function() { 
+	$('#incrementar').bind('click', function() {
+		var valorAtual = $('.progresso').progressbar('option', 'value');	
+		var novoValor = valorAtual + 10; 
+		if(novoValor > 100) {return true;}
+		$('.progresso').progressbar('option', 'value', novoValor)	
+	});
+	$('.progresso').progressbar();	
+});
+// ]]>
+</script>
+</head>
+<body class="cap12">
+<div id="tudo">
+<div id="conteudo">
+<header>	
+	<h1>Capítulo 12 &#8212; Widget Progressbar (Barra de progresso)</h1>
+	<p><a href="../index.html"></a></p>
+	<div class="clear"></div>	
+</header>
+<section>	
+	<h2>Opção <code>value</code></h2>
+	<p class="ui-state-highlight ui-corner-all"><button class="botao" id="incrementar">Incrementar progresso</button></p>
+	<div class="progresso"></div>
+
+<p class="tema">Tema: Smoothness</p>
+</section>
+<footer>	
+	<nav><a href="barra-funcionando.html">&laquo; anterior</a> | <a href="eventos-change-complete.html">próximo &raquo;</a></nav>
+	<input type="button" value="RESET" onclick="window.location.reload()" id="reload" />
+	<div class="clear"></div>	
+</footer>
+</div> <!-- /conteudo -->
+</div> <!-- /tudo -->
+</body>
+</html>

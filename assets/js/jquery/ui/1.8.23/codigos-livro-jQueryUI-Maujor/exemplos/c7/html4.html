@@ -1,0 +1,93 @@
+<!DOCTYPE html>
+<html lang="pt-br">
+<head>
+<title>Livro jQuery UI do Maujor</title>
+<meta charset="utf-8" />
+<meta name="keywords" content="jquery,interface de usuário,ui,widgets,interação,javascript, livro maujor, maujor" />
+<meta name="description" content="Página integrante do site de apoio ao livro jQuery UI do Maujor. O site contém todos os exemplos constantes do livro." />
+<meta name="author" content="Maujor" />
+<link rel="shortcut icon" href="/favicon.ico" />
+<link rel="icon" href="/favicon.ico" type="image/x-icon" />
+<link type="text/css" href="css/start/jquery-ui-1.8.18.custom.css" rel="stylesheet" />
+<style>
+.menu-acordeao {width:200px;}
+.dir h2 {
+	text-align:center;
+	margin:0
+	}
+.esq {width:210px;}
+.dir {width:460px;}
+.menu-acordeao li a {
+	color:#060;
+	font-size:12px;
+	font-weight:bold;
+	}
+.menu-acordeao li {
+	margin-bottom:5px;
+	}
+</style>	
+<link href="../estilos.css" rel="stylesheet" type="text/css" /> <!-- CSS para as páginas exemplo -->
+<script type="text/javascript" src="../modernizr.js"></script> 
+<script type="text/javascript" src="../jquery-min.js"></script>
+<script type="text/javascript" src="js/jquery-ui-1.8.18.custom.min.js"></script>
+<script type="text/javascript" src="js/jquery-ui-1.8.18.custom-core-effects.min.js"></script>
+<script>
+//<![CDATA[
+$(function() { 
+	$('.menu-acordeao').accordion({
+		active: false, 
+		animated: 'easeOutBounce',
+		autoHeight: false,
+		collapsible: true,
+		navigation: true
+});
+
+	$("h3>a").click(function(event){
+	window.location.hash=this.hash;
+	});
+});
+// ]]>
+</script>
+</head>
+<body class="cap7">
+<div id="tudo">
+<div id="conteudo">
+<header>	
+	<h1>Capítulo 7 &#8212; Widget Accordion (Acordeão)</h1>
+	<p><a href="../index.html"></a></p>
+	<div class="clear"></div>	
+</header>
+	<h2>Opção <code>navigation</code></h2>
+	<p class="ui-state-highlight ui-corner-all">Abra o menu, recarregue ou navegue pelas páginas e observe que o menu permanece aberto.</p>
+<div class="esq">
+<div class="menu-acordeao">
+	<h3><a href="#html">HTML</a></h3>
+	<ul>
+		<li><a href="html4.html#html">HTML4</a></li>
+		<li><a href="html5.html#html">HTML5</a></li>
+	</ul>
+	
+	<h3><a href="#css">CSS</a></h3>
+	<ul>
+		<li><a href="css2.1.html#css">CSS2.1</a></li>
+		<li><a href="css3.html#css">CSS3</a></li>
+	</ul>
+</div>
+	
+</div>
+<div class="dir">
+	<h2>HTML4</h2>
+		<p>Lorem ipsum dolor sit amet, consectetuer adipiscing elit. Morbi eleifend, purus quis laoreet faucibus, ante augue malesuada mi, id rhoncus augue lorem eget elit. Ut sollicitudin sodales purus. Phasellus libero felis, blandit nec, commodo ut, imperdiet ut, nibh. Suspendisse potenti. Donec ullamcorper cursus dolor. Duis vitae ipsum.</p>
+</div>
+<div class="clear"></div>
+<p class="tema">Tema: Start</p>
+</section>
+<footer>	
+	<nav><a href="opcao-icons.html">&laquo; anterior</a> | <a href="evento-change.html">próximo &raquo;</a></nav>
+	<input type="button" value="RESET" onclick="window.location.reload()" id="reload" />
+	<div class="clear"></div>	
+</footer>
+</div> <!-- /conteudo -->
+</div> <!-- /tudo -->
+</body>
+</html>

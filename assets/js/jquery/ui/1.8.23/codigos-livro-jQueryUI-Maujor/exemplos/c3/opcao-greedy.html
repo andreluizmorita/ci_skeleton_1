@@ -1,0 +1,84 @@
+<!DOCTYPE html>
+<html lang="pt-br">
+<head>
+<title>Livro jQuery UI do Maujor</title>
+<meta charset="utf-8" />
+<meta name="keywords" content="jquery,interface de usuário,ui,widgets,interação,javascript, livro maujor, maujor" />
+<meta name="description" content="Página integrante do site de apoio ao livro jQuery UI do Maujor. O site contém todos os exemplos constantes do livro." />
+<meta name="author" content="Maujor" />
+<link rel="shortcut icon" href="/favicon.ico" />
+<link rel="icon" href="/favicon.ico" type="image/x-icon" />
+<link type="text/css" href="css/hot-sneaks/jquery-ui-1.8.17.custom.css" rel="stylesheet" />	
+<link href="../estilos.css" rel="stylesheet" type="text/css" /> <!-- CSS para as páginas exemplo -->
+<style>
+.drag {
+	width:80px; 
+	height:50px;
+	}
+.drop, .drop1 {
+	width:280px;
+	height:280px;
+	}
+.drop-inner, .drop1-inner {
+	width:100px; 
+	height:100px;
+	margin: 60px 70px;
+	padding:10px;
+	}
+.destacar {background:#daf6ff !important;}
+.over {background:#ffc !important;}
+</style>
+<script type="text/javascript" src="../jquery-min.js"></script>
+<script type="text/javascript" src="js/jquery-ui-1.8.17.custom.min.js"></script>
+<script>
+$(function() {
+	$( '.drag' ).draggable({revert: 'invalid'});
+		$( '.drop, .drop-inner' ).droppable({
+			activeClass: 'destacar',
+			hoverClass: 'over',
+		});
+		$( '.drop1, .drop1-inner' ).droppable({
+			greedy: true,
+			activeClass: 'destacar',
+			hoverClass: 'over',
+		});
+});
+</script>
+</head>
+<body class="cap3">
+<div id="tudo">
+<div id="conteudo">
+<header>	
+	<h1>Capítulo 3 &#8212; Componente Droppable (Soltar)</h1>
+	<p><a href="../index.html"></a></p>
+	<div class="clear"></div>	
+</header>
+<section>	
+	<h2>Opção <code>greedy</code></h2>
+		<div class="drag esq  ui-widget-content ui-corner-all">
+			<h3 class="ui-widget-header">Arraste-me</h3>
+		</div>
+
+		<div class="drop dir ui-widget-content ui-corner-all">DROP PAI
+			<div class="drop-inner ui-widget-content ui-corner-all">
+				DROP FILHO<br />sem greedy
+			</div>
+		</div>
+
+		<div class="drop1 dir ui-widget-content ui-corner-all">DROP PAI
+			<div class="drop1-inner ui-widget-content ui-corner-all">
+				DROP FILHO<br />com greedy
+			</div>
+		</div>	
+	<div class="clear"></div>	
+<p class="tema">Tema: hot-sneaks/personalizado</p>
+</section>
+<footer>	
+	<nav><a href="opcao-activeclass.html">&laquo; anterior</a> | <a href="opcao-scope.html">próximo &raquo;</a></nav>
+	<input type="button" value="RESET" onclick="window.location.reload()" id="reload" />
+	<div class="clear"></div>	
+</footer>
+</div> <!-- /conteudo -->
+</div> <!-- /tudo -->
+</body>
+</html>
